@@ -20,8 +20,10 @@ body {
 main {
   padding: 0;
   height: 100vh;
-  background: url(../img/background.jpg) no-repeat;
+  background: url(../img/main-bg.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
+  max-width: 100%;
 }
 
 h1 {
@@ -33,10 +35,12 @@ h1 {
 span {
   display: block;
   font-size: 4em;
+  color: #fff;
 }
 
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .enter-screen {
