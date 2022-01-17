@@ -43,23 +43,59 @@ const carsDB = [
 
 // const cars = document.querySelector('.cars');
 
-//show 3 cards with car name, country and so on
-function showcarDB(cars) {
-  const element = document.createElement('div');
-  cars.forEach((car) => {
-    element.classList.add('car-card');
-    element.innerHTML += `
-        <div class="car-card__item">
-            <span>${car.car}</span>
-            <span>${car.setup[0].country}</span>
-            <span>${car.setup[0].conditions}</span>
-            <span>${car.setup[0].tyres}</span>
-        </div>
-    `;
+// //show 3 cards with car name, country and so on
+// function showcarDB(cars) {
+//   const element = document.createElement('div');
+//   console.log(cars);
+//   cars.forEach((car) => {
+//     element.classList.add('car-card');
+//     element.innerHTML += `
+//         <div class="car-card__item">
+//             <span>${car.car}</span>
+//             <span>${car.setup[0].country}</span>
+//             <span>${car.setup[0].conditions}</span>
+//             <span>${car.setup[0].tyres}</span>
+//         </div>
+//     `;
+//   });
+//   document.querySelector('.cars').append(element);
+// }
+// showcarDB(carsDB);
+
+// taking the cars database and insert car name to the option tag
+const chooseCar = (carsData) => {
+  for (let i = 0; i < carsData.length; i++) {
+    const el = document.createElement('option');
+    el.innerHTML = carsData[i].car;
+    el.value = carsData[i].car;
+    document.querySelector('#cars').append(el);
+  }
+};
+chooseCar(carsDB);
+
+function chooseCarName() {
+  const option = document.querySelectorAll('option');
+  option.forEach((el, i) => {
+    console.log(el.innerHTML, i);
   });
-  document.querySelector('.cars').append(element);
+  const select = document.querySelector('#cars');
+  select.addEventListener('change', () => {
+    console.log(select.selectedIndex);
+    if (select.selectedIndex == 1) {
+      console.log('volve');
+      const el = document.querySelector('.cars');
+      el.innerHTML = 'HEKKK';
+    }
+  });
+  // document.querySelectorAll('option').forEach((option) => {
+  //   // console.log(option.value);
+  // });
 }
-showcarDB(carsDB);
+chooseCarName();
+
+// select.onchange = () => {
+//   console.log(select.selectedIndex);
+// };
 
 //clicking on car card
 // const carCards = document.querySelectorAll('.car-card__item');
