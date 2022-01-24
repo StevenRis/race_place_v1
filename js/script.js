@@ -22,7 +22,7 @@ const carsDB = [
             'Brake Bias': 58,
           },
           differential: {
-            // add &
+            // add %
             'Front LSD Driving Lock': 36,
             'Front LSD Braking Lock': 40,
             // add N-m
@@ -45,7 +45,7 @@ const carsDB = [
           },
           springs: {
             // add mm
-            'ride Height Front': -20,
+            'Ride Height Front': -20,
             // add N/mm
             'Spring Rate Front': 102.26,
             // add mm
@@ -53,6 +53,18 @@ const carsDB = [
             // add N/mm
             'Spring Rate Rear': 12.5,
           },
+        },
+      },
+      {
+        australia: {
+          tyres: 'Medium',
+          conditions: 'Wet',
+        },
+      },
+      {
+        finland: {
+          tyres: 'Medium',
+          conditions: 'Wet',
         },
       },
     ],
@@ -68,6 +80,8 @@ const carsDB = [
     car: 'Citroen DS 21',
   },
 ];
+
+// console.log(carsDB[0].setup[0].argentina.alignment['Toe Angle Front']);
 
 const countryDB = [
   {
@@ -89,6 +103,64 @@ const countryDB = [
   },
 ];
 
+class MenuCard {
+  constructor(
+    src,
+    alt,
+    title,
+    country,
+    tyres,
+    conditions,
+    alignment,
+    parentSelector,
+    ...classes
+  ) {
+    this.src = src;
+    this.alt = alt;
+    this.title = title;
+    this.country = country;
+    this.tyres = tyres;
+    this.conditions = conditions;
+    this.alignment = alignment;
+    this.classes = classes;
+    this.parent = document.querySelector(parentSelector);
+  }
+
+  render() {
+    const element = document.createElement('div');
+    if (this.classes.length === 0) {
+      this.element = 'car__item';
+      element.classList.add(this.element);
+    } else {
+      this.classes.forEach((className) => element.classList.add(className));
+    }
+
+    element.innerHTML = `
+      <img src=${this.src} alt=${this.alt} />
+      <h3 class="car__item-title">Car: ${this.title}</h3>
+      <div class="car__item-country">Country: ${this.country}</div>
+      <div class="car__item-setup">
+        <div class="menu__item-tyres">Tyres: ${this.tyres}</div>
+        <div class="menu__item-conditions">Conditions: ${this.conditions}</div>
+        <div class="menu__item-conditions">Toe Angle Front: ${this.alignment}</div>
+      </div>
+      `;
+    this.parent.append(element);
+  }
+}
+
+// first card
+// new MenuCard(
+//   'img/carInfo/Mini_Copper_S.png',
+//   'Mini Cooper S',
+//   'Mini Cooper S',
+//   'Argentina',
+//   'Soft',
+//   'Dry',
+//   -0.2,
+//   '.cars__setup'
+// ).render();
+
 // variables
 const countryList = document.querySelector('#country');
 const enterBtn = document.querySelector('.enter-screen__title');
@@ -98,7 +170,7 @@ const countries = document.querySelector('.countries');
 const selectCar = document.querySelector('#cars');
 const selectCountry = document.querySelector('#country');
 
-// 1select - load the lt of cars
+// 1st select - load the list of cars
 function setCar(car) {
   for (let i = 0; i < car.length; i++) {
     const el = document.createElement('option');
@@ -109,7 +181,7 @@ function setCar(car) {
 }
 setCar(carsDB);
 
-// 2 select - load the list of countries
+// 2nd select - load the list of countries
 function setCountry(country) {
   for (let i = 0; i < country.length; i++) {
     const el = document.createElement('option');
@@ -131,42 +203,118 @@ function chooseCarName() {
     }
   });
 
-  // need to remove this after everything is done, just logging the option index
+  // checks index of the 2nd select and calls the functions, that set Country and compare a car with a country
   selectCountry.addEventListener('change', () => {
     console.log(`${selectCountry.selectedIndex} ${selectCountry.value}`);
-    if (selectCountry.selectedIndex === 1) {
-      setCountry(countryDB[0].country);
-      compare();
+    switch (selectCountry.selectedIndex) {
+      case 1:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 2:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 3:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 4:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 5:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 6:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 7:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 8:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 9:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 10:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 11:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 12:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      case 13:
+        setCountry(countryDB[0].country);
+        compare();
+        break;
+      default:
+        console.log('error');
     }
   });
 }
 chooseCarName();
 
-function compare() {
-  if (selectCar.selectedIndex === 1 && selectCountry.selectedIndex === 1) {
-    console.log('this will show the setup');
-  } else {
-    console.log('error');
-  }
-}
+const setup = document.querySelector('.cars__setup');
 
-console.log(carsDB[0].setup[0].argentina.tyres);
-
-const setup = document.querySelector('.car-setup');
-const tyres = carsDB[0].setup[0].argentina.tyres;
-
-function showSetup(setups, parent, tyres) {
+function showSetup(setups, parent, tyres, alignment) {
   parent.innerHTML = '';
   const el = document.createElement('div');
   el.innerHTML += `
     <span>Conditions: ${setups}</span>
     <span>Tyres: ${tyres}</span>
+    <span>Alignment: ${alignment}</span>
+
 
     `;
   parent.append(el);
 }
-showSetup(carsDB[0].setup[0].argentina.conditions, setup, tyres);
-// showSetup(tyres, setup);
+
+function compare() {
+  if (selectCar.selectedIndex === 1 && selectCountry.selectedIndex === 1) {
+    console.log('this will show the setup');
+    new MenuCard(
+      'img/carInfo/Mini_Copper_S.png',
+      'Mini Cooper S',
+      'Mini Cooper S',
+      'Argentina',
+      'Soft',
+      'Dry',
+      -0.2,
+      '.cars__setup'
+    ).render();
+    // showSetup(
+    //   carsDB[0].setup[0].argentina.conditions,
+    //   setup,
+    //   carsDB[0].setup[0].argentina.tyres,
+    //   carsDB[0].setup[0].argentina.alignment['Toe Angle Front']
+    // );
+  } else if (
+    selectCar.selectedIndex === 1 &&
+    selectCountry.selectedIndex === 2
+  ) {
+    console.log('this will show the setup');
+    showSetup(
+      carsDB[0].setup[1].australia.conditions,
+      setup,
+      carsDB[0].setup[1].australia.tyres
+    );
+  } else {
+    setup.innerHTML = '';
+    console.log('error');
+  }
+}
 
 // ENTER SCREEN ///////
 enterBtn.addEventListener('click', () => {
