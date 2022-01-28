@@ -82,6 +82,7 @@ const carsDB = [
 ];
 
 // console.log(carsDB[0].setup[0].argentina.alignment['Toe Angle Front']);
+console.log(JSON.stringify(carsDB));
 
 const countryDB = [
   {

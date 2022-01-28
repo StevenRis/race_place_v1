@@ -1,0 +1,29 @@
+[33mcommit b3d50f4ca50c9e1677f6c84ebc122c30ce4ceb89[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Mon Jan 24 21:08:04 2022 +0100
+
+    add class to car and css
+
+[33mcommit fd1aca186a62a877c21499a3843238a1aaf6f3ca[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Sat Jan 22 00:24:59 2022 +0100
+
+    make select country due to car, and database of setup(started)
+
+[33mcommit 475b25ec03562aace4b8a023977b04a2b3199e64[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Mon Jan 17 23:31:53 2022 +0100
+
+    add select for cars and js code to operate the selection
+
+[33mcommit 0365c54f415655a20b26731da5498b96f50e8e2e[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Jan 13 00:39:42 2022 +0100
+
+    add bg change
+
+[33mcommit ce778ba93827bc51594b97b72d9ca68e45f8d25a[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Jan 13 00:18:40 2022 +0100
+
+    first commit

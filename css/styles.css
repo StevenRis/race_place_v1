@@ -17,9 +17,6 @@ body {
   margin: 0 auto;
 }
 
-main {
-}
-
 .main__background {
   padding: 0;
   background: url(../img/main-bg.jpg) no-repeat;
@@ -65,18 +62,35 @@ span {
   display: none;
 } */
 
-.car-card {
+.car-cards,
+.country-card {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.car-card__item {
+.car-cards__item {
+  font-size: 4em;
   color: #ffffff;
   text-align: center;
   background-color: #e7002a;
   box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
   border-radius: 10px;
-  padding: 2em 3em;
-  margin: 0 50px;
+  padding: 0.5em 1em;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.country-card__item {
+  display: flex;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  background-color: #e7002a;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  border-radius: 10px;
+  padding: 1em 1em;
+  margin: 20px 20px;
+  cursor: pointer;
 }
 
 .hide {
