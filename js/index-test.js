@@ -168,7 +168,7 @@ setupsDB.forEach((item) => {
 //ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
 const cardsParent = document.querySelector('.tree');
-const setupsParent = document.querySelector('.setups');
+const setupsParent = document.querySelectorAll('.setups');
 const setupItems = document.querySelectorAll('.setup__country');
 
 // remove class selected and class setups--active
@@ -185,6 +185,21 @@ function show(item) {
   carCards[item].lastElementChild.classList.add('setups--active');
 }
 
+//click on the class tree
+cardsParent.addEventListener('click', (e) => {
+  const target = e.target;
+  console.log(target);
+
+  if (target.classList.contains('car-card')) {
+    carCards.forEach((item, i) => {
+      if (target == item) {
+        hide();
+        show(i);
+      }
+    });
+  }
+});
+
 // remove class selected and setup__item--active
 function h() {
   setupItems.forEach((item) => {
@@ -199,34 +214,31 @@ function s(item) {
   setupItems[item].lastElementChild.classList.add('setup__item--active');
 }
 
-//click on the class tree
-cardsParent.addEventListener('click', (e) => {
-  const target = e.target;
-
-  if (target.classList.contains('car-card')) {
-    h();
-    carCards.forEach((item, i) => {
-      if (target == item) {
-        hide();
-        show(i);
-      }
-    });
-  }
-});
-
 // click on the class setups
-setupsParent.addEventListener('click', (e) => {
-  const t = e.target;
-
-  if (t && t.classList.contains('setup__country')) {
-    setupItems.forEach((item, i) => {
-      if (t == item) {
-        h();
-        s(i);
-      }
-    });
-  }
+setupsParent.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const t = e.target;
+    console.log(t);
+    if (t && t.classList.contains('setup__country')) {
+      setupItems.forEach((item, i) => {
+        if (t == item) {
+          h();
+          s(i);
+        }
+      });
+    }
+  });
 });
+
+// document.querySelectorAll('.setups').forEach((item) => {
+//   item.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('selected')) {
+//       e.target.classList.remove('selected');
+//     } else {
+//       e.target.classList.add('selected');
+//     }
+//   });
+// });
 
 // carCard.addEventListener('click', (event) => {
 //   //   if (event.target.tagName != 'SPAN') {

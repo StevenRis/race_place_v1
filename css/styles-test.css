@@ -62,7 +62,7 @@ body {
 }
 
 .car-card {
-  display: flex;
+  /* display: flex; */
   font-size: 4em;
   color: #ffffff;
   text-align: center;
@@ -80,11 +80,11 @@ body {
 }
 
 .setups.setups--active {
-  display: flex;
+  display: block;
 }
 
 .setup__country {
-  display: flex;
+  /* display: flex; */
   color: #ffffff;
   text-align: center;
   align-items: center;
