@@ -4,7 +4,6 @@ const setupsDB = [
   {
     id: 1,
     car: 'subaru impreza wrx',
-    // countries: ['argentina', 'australia', 'finland', 'germany'],
     setup: [
       {
         country: 'argentina',
@@ -55,7 +54,6 @@ const setupsDB = [
   {
     id: 2,
     car: 'ford focus st',
-    countries: ['argentina', 'australia', 'germany', 'scotland'],
     setup: [
       {
         country: 'argentina',
@@ -97,7 +95,6 @@ const setupsDB = [
   {
     id: 3,
     car: 'Mitsu lancer',
-    countries: ['brazil', 'russia', 'poland', 'wales'],
     setup: [
       {
         country: 'brazil',
@@ -133,7 +130,7 @@ setupsDB.forEach((item) => {
   const carCard = document.createElement('div');
   carCard.classList.add('car-card');
   carCard.innerHTML = `
-    <span>${item.car}</span>
+    ${item.car}
     <div class="setups"></div>
   `;
   tree.append(carCard);
@@ -174,15 +171,15 @@ const setupItems = document.querySelectorAll('.setup__country');
 // remove class selected and class setups--active
 function hide() {
   carCards.forEach((item) => {
-    item.classList.remove('selected');
-    item.lastElementChild.classList.remove('setups--active');
+    // item.classList.toremoveggle('selected');
+    // item.lastElementChild.classList.remove('setups--active');
   });
 }
 
 // add class selected and clas setup--active
 function show(item) {
-  carCards[item].classList.add('selected');
-  carCards[item].lastElementChild.classList.add('setups--active');
+  carCards[item].classList.toggle('selected');
+  carCards[item].lastElementChild.classList.toggle('setups--active');
 }
 
 //click on the class tree
@@ -203,15 +200,15 @@ cardsParent.addEventListener('click', (e) => {
 // remove class selected and setup__item--active
 function h() {
   setupItems.forEach((item) => {
-    item.classList.remove('selected');
-    item.lastElementChild.classList.remove('setup__item--active');
+    // item.classList.remove('selected');
+    // item.lastElementChild.classList.remove('setup__item--active');
   });
 }
 
 // add class selected and clas setup__item--active
 function s(item) {
-  setupItems[item].classList.add('selected');
-  setupItems[item].lastElementChild.classList.add('setup__item--active');
+  setupItems[item].classList.toggle('selected');
+  setupItems[item].lastElementChild.classList.toggle('setup__item--active');
 }
 
 // click on the class setups
