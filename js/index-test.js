@@ -3,7 +3,7 @@
 const setupsDB = [
   {
     id: 1,
-    car: 'subaru impreza wrx',
+    car: 'Subaru Impreza WRX',
     setup: [
       {
         country: 'argentina',
@@ -53,7 +53,7 @@ const setupsDB = [
   },
   {
     id: 2,
-    car: 'ford focus st',
+    car: 'Ford Focus ST',
     setup: [
       {
         country: 'argentina',
@@ -94,7 +94,7 @@ const setupsDB = [
   },
   {
     id: 3,
-    car: 'Mitsu lancer',
+    car: 'Mitsubishi Lancer VII',
     setup: [
       {
         country: 'brazil',
@@ -171,8 +171,8 @@ const setupItems = document.querySelectorAll('.setup__country');
 // remove class selected and class setups--active
 function hide() {
   carCards.forEach((item) => {
-    // item.classList.toremoveggle('selected');
-    // item.lastElementChild.classList.remove('setups--active');
+    item.classList.remove('selected');
+    item.lastElementChild.classList.remove('setups--active');
   });
 }
 
@@ -190,7 +190,7 @@ cardsParent.addEventListener('click', (e) => {
   if (target.classList.contains('car-card')) {
     carCards.forEach((item, i) => {
       if (target == item) {
-        hide();
+        // hide();
         show(i);
       }
     });
@@ -225,6 +225,12 @@ setupsParent.forEach((item) => {
       });
     }
   });
+});
+
+cardsParent.addEventListener('click', (e) => {
+  if (e.target.classList.contains('tree')) {
+    hide();
+  }
 });
 
 // document.querySelectorAll('.setups').forEach((item) => {
