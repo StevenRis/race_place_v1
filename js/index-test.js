@@ -165,6 +165,7 @@ setupsDB.forEach((item) => {
 //   });
 // });
 
+//ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
 const tabsContent = document.querySelectorAll('.tabcontent');
 const cardsParent = document.querySelector('.tree');
