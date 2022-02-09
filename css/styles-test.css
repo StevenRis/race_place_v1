@@ -80,7 +80,7 @@ body {
 }
 
 .setups.setups--active {
-  display: block;
+  display: flex;
 }
 
 .setup__country {

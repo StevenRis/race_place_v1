@@ -167,26 +167,62 @@ setupsDB.forEach((item) => {
 
 //ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
-const tabsContent = document.querySelectorAll('.tabcontent');
 const cardsParent = document.querySelector('.tree');
+const setupsParent = document.querySelector('.setups');
+const setupItems = document.querySelectorAll('.setup__country');
 
-function hideTabContent() {
+// remove class selected and class setups--active
+function hide() {
   carCards.forEach((item) => {
     item.classList.remove('selected');
+    item.lastElementChild.classList.remove('setups--active');
   });
 }
 
-function showtabContent(item) {
+// add class selected and clas setup--active
+function show(item) {
   carCards[item].classList.add('selected');
+  carCards[item].lastElementChild.classList.add('setups--active');
 }
 
+// remove class selected and setup__item--active
+function h() {
+  setupItems.forEach((item) => {
+    item.classList.remove('selected');
+    item.lastElementChild.classList.remove('setup__item--active');
+  });
+}
+
+// add class selected and clas setup__item--active
+function s(item) {
+  setupItems[item].classList.add('selected');
+  setupItems[item].lastElementChild.classList.add('setup__item--active');
+}
+
+//click on the class tree
 cardsParent.addEventListener('click', (e) => {
   const target = e.target;
+
   if (target.classList.contains('car-card')) {
+    h();
     carCards.forEach((item, i) => {
       if (target == item) {
-        hideTabContent();
-        showtabContent(i);
+        hide();
+        show(i);
+      }
+    });
+  }
+});
+
+// click on the class setups
+setupsParent.addEventListener('click', (e) => {
+  const t = e.target;
+
+  if (t && t.classList.contains('setup__country')) {
+    setupItems.forEach((item, i) => {
+      if (t == item) {
+        h();
+        s(i);
       }
     });
   }
