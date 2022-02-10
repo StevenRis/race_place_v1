@@ -9,44 +9,196 @@ const setupsDB = [
         country: 'argentina',
         tyres: 'soft',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
       {
         country: 'australia',
         tyres: 'medium',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
       {
         country: 'finland',
         tyres: 'hard',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
       {
         country: 'germany',
         tyres: 'hard',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
     ],
@@ -59,11 +211,49 @@ const setupsDB = [
         country: 'argentina',
         tyres: 'soft',
         conditions: 'dry',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '2.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '68',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
 
@@ -71,11 +261,49 @@ const setupsDB = [
         country: 'finland',
         tyres: 'soft',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
 
@@ -83,11 +311,49 @@ const setupsDB = [
         country: 'scotland',
         tyres: 'soft',
         conditions: 'wet',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '1.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '58',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
     ],
@@ -100,22 +366,98 @@ const setupsDB = [
         country: 'brazil',
         tyres: 'hard',
         conditions: 'dry',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '2.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '68',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
       {
         country: 'russia',
         tyres: 'not hard',
         conditions: 'dry',
+        alignment: {
+          toeAngleFront: -0.2,
+          camberAngleFront: -0.9,
+          toeAngleRear: -0,
+          camberAngleRear: -0.97,
+        },
         brakes: {
           // add N-m
-          brakingforce: '2.298',
+          brakingForce: 1.298,
           // add %
-          brakeBias: '68',
+          brakeBias: 58,
+        },
+        differential: {
+          // add %
+          frontLSDDrivingLock: 36,
+          frontLSDBrakingLock: 40,
+          // add N-m
+          frontLSDPreload: 100,
+        },
+        gearing: {
+          fstGear: 0.393,
+          sndGear: 0.524,
+          thrdGear: 0.73,
+          forthGear: 1.009,
+          finalDrive: 0.21,
+          note: 'Final drive: Minimum ',
+          optimalShift: 'Redline',
+        },
+        damping: {
+          slowBumpFront: -2,
+          slowReboundFront: -1,
+          slowBumpRear: -2,
+          slowRebound: -1,
+        },
+        springs: {
+          // add mm
+          rideHeightFront: -20,
+          // add N/mm
+          springRateFront: 102.26,
+          // add mm
+          rideHeightRear: -20,
+          // add N/mm
+          springRateRear: 12.5,
         },
       },
     ],
@@ -141,12 +483,23 @@ setupsDB.forEach((item) => {
     const el = document.createElement('div');
     el.classList.add('setup__country');
     el.innerHTML = `
-    <span>${item.country}</span>
+    ${item.country}
       <div class="setup__item">
-        <p>Tyres: ${item.tyres}</p>
-        <p>Conditions: ${item.conditions}</p>
-        <p>Brake Bias: ${item.brakes.brakeBias}</p>
-        <p>Braking force: ${item.brakes.brakingforce}</p>
+        <div class="setup__item-tyres">
+          Tyres: ${item.tyres}
+        </div>
+        <div class="setup__item-conditions">Conditions: ${item.conditions}</div>
+        <div class="setup__item-alignment">Alignment
+          <div>Toe Angle Front: ${item.alignment.toeAngleFront}</div>
+          <div>Camber Angle Front: ${item.alignment.camberAngleFront}</div>
+          <div>Toe Angle Rear: ${item.alignment.toeAngleRear}</div>
+          <div>Camber Angle Rear: ${item.alignment.camberAngleRear}</div>
+        </div>
+        <div class="setup__item-brakes">Brakes
+          <div>Brake Bias: ${item.brakes.brakeBias}</div>
+          <div>Braking force: ${item.brakes.brakingForce}</div>
+
+        </div>
       </div>
     `;
     setups.forEach((item) => {
@@ -155,6 +508,7 @@ setupsDB.forEach((item) => {
   });
 });
 
+console.log(setupsDB[0].setup[0]);
 // document.querySelectorAll('.car-card').forEach((event) => {
 //   let card = document.querySelectorAll('.car-card');
 //   event.addEventListener('click', (e) => {
