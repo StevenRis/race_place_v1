@@ -4,9 +4,10 @@ const setupsDB = [
   {
     id: 1,
     car: 'Subaru Impreza WRX',
+    img: 'img/carinfo/Mini_Copper_S-removebg-preview.png',
     setup: [
       {
-        country: 'argentina',
+        country: 'Argentina',
         tyres: 'soft',
         conditions: 'wet',
         alignment: {
@@ -473,6 +474,8 @@ setupsDB.forEach((item) => {
   carCard.classList.add('car-card');
   carCard.innerHTML = `
     ${item.car}
+    <img src="${item.img}" alt="">
+    
     <div class="setups"></div>
   `;
   tree.append(carCard);
@@ -484,21 +487,54 @@ setupsDB.forEach((item) => {
     el.classList.add('setup__country');
     el.innerHTML = `
     ${item.country}
+    
       <div class="setup__item">
-        <div class="setup__item-tyres">
-          Tyres: ${item.tyres}
+        <div class="setup__item-tyres">Tyres
+          <span>${item.tyres}</span>
         </div>
-        <div class="setup__item-conditions">Conditions: ${item.conditions}</div>
-        <div class="setup__item-alignment">Alignment
-          <div>Toe Angle Front: ${item.alignment.toeAngleFront}</div>
-          <div>Camber Angle Front: ${item.alignment.camberAngleFront}</div>
-          <div>Toe Angle Rear: ${item.alignment.toeAngleRear}</div>
-          <div>Camber Angle Rear: ${item.alignment.camberAngleRear}</div>
-        </div>
-        <div class="setup__item-brakes">Brakes
-          <div>Brake Bias: ${item.brakes.brakeBias}</div>
-          <div>Braking force: ${item.brakes.brakingForce}</div>
+        <div class="setup__item-conditions">Conditions
+        <span>${item.conditions}</span></div>
 
+        <div class="setup__item-alignment">Alignment
+          <div>Toe Angle Front: ${item.alignment.toeAngleFront} °</div>
+          <div>Camber Angle Front: ${item.alignment.camberAngleFront} °</div>
+          <div>Toe Angle Rear: ${item.alignment.toeAngleRear} °</div>
+          <div>Camber Angle Rear: ${item.alignment.camberAngleRear} °</div>
+        </div>
+
+        <div class="setup__item-brakes">Brakes
+          <div>Brake Bias: ${item.brakes.brakeBias} N-m</div>
+          <div>Braking force: ${item.brakes.brakingForce} %</div>
+        </div>
+
+        <div class="setup__item-dif">Differential
+          <div>Front LSD Driving lock: ${item.differential.frontLSDDrivingLock} %</div>
+          <div>Front LSD Braking Lock: ${item.differential.frontLSDBrakingLock} %</div>
+          <div>Front LSD Preload: ${item.differential.frontLSDPreload} N-m</div>
+        </div>
+
+        <div class="setup__item-gear">Gearing
+          <div>1st Gear: ${item.gearing.fstGear}</div>
+          <div>2nt Gear: ${item.gearing.sndGear}</div>
+          <div>3rd Gear: ${item.gearing.thrdGear}</div>
+          <div>4th Gear: ${item.gearing.forthGear}</div>
+          <div>Final Drive: ${item.gearing.finalDrive}</div>
+          <div>Note: ${item.gearing.note}</div>
+          <div>Optimal Shift: ${item.gearing.optimalShift}</div>
+        </div>
+
+        <div class="setup__item-damp">Damping
+          <div>Slow Bump Front: ${item.damping.slowBumpFront}</div>
+          <div>Slow Rebound Front: ${item.damping.slowReboundFront}</div>
+          <div>Slow Bump Rear: ${item.damping.slowBumpRear}</div>
+          <div>Slow Rebound Rear: ${item.damping.slowReboundRear}</div>
+        </div>
+
+        <div class="setup__item-springs">Springs
+          <div>Ride Height Front: ${item.springs.rideHeightFront} mm</div>
+          <div>Spring Rate Front: ${item.springs.springRateFront} N/mm</div>
+          <div>Ride Height Rear: ${item.springs.rideHeightRear} mm</div>
+          <div>Spring Rate Rear: ${item.springs.springRateRear} N/mm</div>
         </div>
       </div>
     `;
@@ -508,7 +544,7 @@ setupsDB.forEach((item) => {
   });
 });
 
-console.log(setupsDB[0].setup[0]);
+console.log(setupsDB[0].img);
 // document.querySelectorAll('.car-card').forEach((event) => {
 //   let card = document.querySelectorAll('.car-card');
 //   event.addEventListener('click', (e) => {
