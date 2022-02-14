@@ -3,6 +3,7 @@
 ::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -17,19 +18,20 @@ body {
   margin: 0 auto;
 }
 
-.main__background {
-  padding: 0;
+.main__bg {
   background: url(../img/main-bg.jpg) no-repeat;
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 .enter-screen {
   background: url(../img/main-bg.jpg) no-repeat;
   background-size: cover;
-
   background-position: center;
   color: #fff;
   display: flex;
@@ -47,14 +49,16 @@ body {
 
 .tree {
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  background: url(../img/main-bg.jpg) no-repeat;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  max-width: 100%;
+  width: 100vw;
+  border: 1px solid red;
 }
 
 .tree span {
@@ -63,7 +67,8 @@ body {
 
 .car-card {
   /* display: flex; */
-  font-size: 4em;
+  flex-direction: column;
+  font-size: 2em;
   color: #ffffff;
   text-align: center;
   background-color: #e7002a;
@@ -71,20 +76,19 @@ body {
   border-radius: 10px;
   padding: 0.5em 1em;
   margin: 20px 20px;
+  cursor: pointer;
 }
 
 .setups {
-  /* display: flex; */
   display: none;
   padding: 10px;
 }
 
 .setups.setups--active {
-  display: block;
+  display: flex;
 }
 
 .setup__country {
-  /* display: flex; */
   color: #ffffff;
   text-align: center;
   align-items: center;
@@ -98,13 +102,29 @@ body {
 
 .setup__item {
   display: none;
-  margin: 10px;
+  /* border: 1px solid black; */
+}
+
+.setup__item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 5px;
   padding: 10px;
-  border: 1px solid black;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  border-radius: 10px;
+  /* height: fit-content; */
+  /* border: 1px solid black; */
+  background-color: mediumvioletred;
 }
 
 .setup__item.setup__item--active {
-  display: block;
+  display: flex;
+  /* flex-wrap: wrap; */
+  position: fixed;
+  bottom: 130px;
+  right: 130px;
 }
 
 .hide {
