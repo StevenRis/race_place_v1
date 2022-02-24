@@ -467,7 +467,7 @@ const setupsDB = [
 
 // console.log(setupsDB);
 
-let tree = document.querySelector('.tree');
+let tree = document.querySelector('.main');
 
 setupsDB.forEach((item) => {
   const carCard = document.createElement('div');
@@ -554,7 +554,7 @@ console.log(setupsDB[0].img);
 
 //ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
-const cardsParent = document.querySelector('.tree');
+const cardsParent = document.querySelector('.main');
 const setupsParent = document.querySelectorAll('.setups');
 const setupItems = document.querySelectorAll('.setup__country');
 
@@ -618,7 +618,7 @@ setupsParent.forEach((item) => {
 });
 
 cardsParent.addEventListener('click', (e) => {
-  if (e.target.classList.contains('tree')) {
+  if (e.target.classList.contains('main')) {
     hide();
   }
 });
@@ -674,6 +674,6 @@ function removeHide() {
 }
 
 function changeBG() {
-  document.querySelector('.tree').style.backgroundImage =
+  document.querySelector('.main').style.backgroundImage =
     'url(../img/selectionPage-bg.jpg)';
 }
