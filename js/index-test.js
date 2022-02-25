@@ -473,14 +473,18 @@ setupsDB.forEach((item) => {
   const carCard = document.createElement('div');
   carCard.classList.add('car-card');
   carCard.innerHTML = `
-    ${item.car}
-    <img src="${item.img}" alt="">
+  <div class="car-card__title">${item.car}</div>
     
-    <div class="setups"></div>
+    <div class='car-card__image'>
+      <img src="${item.img}" alt="">
+    </div>
+    
+    
+    <div class="car-card__setups"></div>
   `;
   tree.append(carCard);
 
-  let setups = document.querySelectorAll('.setups');
+  let setups = document.querySelectorAll('.car-card__setups');
 
   item.setup.forEach((item) => {
     const el = document.createElement('div');
@@ -544,7 +548,7 @@ setupsDB.forEach((item) => {
   });
 });
 
-console.log(setupsDB[0].img);
+// console.log(setupsDB[0].img);
 // document.querySelectorAll('.car-card').forEach((event) => {
 //   let card = document.querySelectorAll('.car-card');
 //   event.addEventListener('click', (e) => {
@@ -555,37 +559,47 @@ console.log(setupsDB[0].img);
 //ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
 const cardsParent = document.querySelector('.main');
-const setupsParent = document.querySelectorAll('.setups');
-const setupItems = document.querySelectorAll('.setup__country');
 
 // remove class selected and class setups--active
 function hide() {
   carCards.forEach((item) => {
     item.classList.remove('selected');
-    item.lastElementChild.classList.remove('setups--active');
+    item.lastElementChild.classList.remove('car-card__setups-active');
   });
 }
 
 // add class selected and clas setup--active
 function show(item) {
   carCards[item].classList.toggle('selected');
-  carCards[item].lastElementChild.classList.toggle('setups--active');
+  carCards[item].lastElementChild.classList.toggle('car-card__setups-active');
 }
 
-//click on the class tree
+//click on the class main
 cardsParent.addEventListener('click', (e) => {
   const target = e.target;
-  console.log(target);
-
-  if (target.classList.contains('car-card')) {
+  if (target.tagName == 'IMG') {
     carCards.forEach((item, i) => {
-      if (target == item) {
+      if (target.parentElement.parentNode == item) {
+        console.log(item);
         // hide();
         show(i);
       }
     });
   }
 });
+
+// cardsParent.addEventListener('click', (e) => {
+//   const target = e.target;
+//   console.log(target.parentElement.parentNode);
+
+//   if (target.tagName == 'IMG') {
+//     carCards.forEach((item, i) => {
+//       if (target.parentElement.parentNode == item) {
+//         show(i);
+//       }
+//     });
+//   }
+// });
 
 // remove class selected and setup__item--active
 function h() {
@@ -600,6 +614,9 @@ function s(item) {
   setupItems[item].classList.toggle('selected');
   setupItems[item].lastElementChild.classList.toggle('setup__item--active');
 }
+
+const setupsParent = document.querySelectorAll('.car-card__setups');
+const setupItems = document.querySelectorAll('.setup__country');
 
 // click on the class setups
 setupsParent.forEach((item) => {

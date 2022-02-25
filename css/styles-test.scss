@@ -1,0 +1,141 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px*/
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  margin: 0 auto;
+}
+
+.main-bg {
+  background: url(../img/main-bg.jpg) no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.enter-screen {
+  background: url(../img/main-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__title {
+    font-size: 3em;
+    padding-bottom: 6em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  // &_hide {
+  //   display: none;
+  // }
+}
+
+.enter-screen,
+.main {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid red;
+}
+
+.main span {
+  cursor: pointer;
+}
+
+.car-card {
+  /* display: flex; */
+  flex-direction: column;
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  background-color: #e7002a;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.car-card__setups {
+  display: none;
+  padding: 10px;
+}
+
+.car-card__setups-active {
+  display: flex;
+}
+
+.setup__country {
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  background-color: #e7002a;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  border-radius: 10px;
+  padding: 1em 1em;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.setup__item {
+  display: none;
+  /* border: 1px solid black; */
+}
+
+.setup__item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  border-radius: 10px;
+  /* height: fit-content; */
+  /* border: 1px solid black; */
+  background-color: mediumvioletred;
+}
+
+.setup__item.setup__item--active {
+  display: flex;
+  /* flex-wrap: wrap; */
+  position: fixed;
+  bottom: 130px;
+  right: 130px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
