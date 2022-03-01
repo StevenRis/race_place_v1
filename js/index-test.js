@@ -4,7 +4,7 @@ const setupsDB = [
   {
     id: 1,
     car: 'Subaru Impreza WRX',
-    img: 'img/carinfo/Mini_Copper_S-removebg-preview.png',
+    img: 'img/car-img/subimpr.png',
     setup: [
       {
         country: 'Argentina',
@@ -56,7 +56,7 @@ const setupsDB = [
         },
       },
       {
-        country: 'australia',
+        country: 'Australia',
         tyres: 'medium',
         conditions: 'wet',
         alignment: {
@@ -105,7 +105,7 @@ const setupsDB = [
         },
       },
       {
-        country: 'finland',
+        country: 'Finland',
         tyres: 'hard',
         conditions: 'wet',
         alignment: {
@@ -154,7 +154,7 @@ const setupsDB = [
         },
       },
       {
-        country: 'germany',
+        country: 'Germany',
         tyres: 'hard',
         conditions: 'wet',
         alignment: {
@@ -207,9 +207,11 @@ const setupsDB = [
   {
     id: 2,
     car: 'Ford Focus ST',
+    img: 'img/car-img/ffocus.png',
+
     setup: [
       {
-        country: 'argentina',
+        country: 'Argentina',
         tyres: 'soft',
         conditions: 'dry',
         alignment: {
@@ -259,7 +261,7 @@ const setupsDB = [
       },
 
       {
-        country: 'finland',
+        country: 'Finland',
         tyres: 'soft',
         conditions: 'wet',
         alignment: {
@@ -309,7 +311,7 @@ const setupsDB = [
       },
 
       {
-        country: 'scotland',
+        country: 'Scotland',
         tyres: 'soft',
         conditions: 'wet',
         alignment: {
@@ -362,9 +364,11 @@ const setupsDB = [
   {
     id: 3,
     car: 'Mitsubishi Lancer VII',
+    img: 'img/car-img/mitslancer.png',
+
     setup: [
       {
-        country: 'brazil',
+        country: 'Wales',
         tyres: 'hard',
         conditions: 'dry',
         alignment: {
@@ -413,7 +417,7 @@ const setupsDB = [
         },
       },
       {
-        country: 'russia',
+        country: 'USA',
         tyres: 'not hard',
         conditions: 'dry',
         alignment: {
@@ -480,7 +484,7 @@ setupsDB.forEach((item) => {
     </div>
     
     
-    <div class="car-card__setups"></div>
+    <div class="car-card__setups setups"></div>
   `;
   tree.append(carCard);
 
@@ -488,36 +492,37 @@ setupsDB.forEach((item) => {
 
   item.setup.forEach((item) => {
     const el = document.createElement('div');
-    el.classList.add('setup__country');
+    el.classList.add('setup-country');
     el.innerHTML = `
     ${item.country}
     
-      <div class="setup__item">
-        <div class="setup__item-tyres">Tyres
+      <div class="setup-country__item">
+      
+        <div class="item__tyres">Tyres
           <span>${item.tyres}</span>
         </div>
-        <div class="setup__item-conditions">Conditions
+        <div class="item__conditions">Conditions
         <span>${item.conditions}</span></div>
 
-        <div class="setup__item-alignment">Alignment
+        <div class="item__alignment">Alignment
           <div>Toe Angle Front: ${item.alignment.toeAngleFront} °</div>
           <div>Camber Angle Front: ${item.alignment.camberAngleFront} °</div>
           <div>Toe Angle Rear: ${item.alignment.toeAngleRear} °</div>
           <div>Camber Angle Rear: ${item.alignment.camberAngleRear} °</div>
         </div>
 
-        <div class="setup__item-brakes">Brakes
+        <div class="item__brakes">Brakes
           <div>Brake Bias: ${item.brakes.brakeBias} N-m</div>
           <div>Braking force: ${item.brakes.brakingForce} %</div>
         </div>
 
-        <div class="setup__item-dif">Differential
+        <div class="item__dif">Differential
           <div>Front LSD Driving lock: ${item.differential.frontLSDDrivingLock} %</div>
           <div>Front LSD Braking Lock: ${item.differential.frontLSDBrakingLock} %</div>
           <div>Front LSD Preload: ${item.differential.frontLSDPreload} N-m</div>
         </div>
 
-        <div class="setup__item-gear">Gearing
+        <div class="item__gear">Gearing
           <div>1st Gear: ${item.gearing.fstGear}</div>
           <div>2nt Gear: ${item.gearing.sndGear}</div>
           <div>3rd Gear: ${item.gearing.thrdGear}</div>
@@ -527,14 +532,14 @@ setupsDB.forEach((item) => {
           <div>Optimal Shift: ${item.gearing.optimalShift}</div>
         </div>
 
-        <div class="setup__item-damp">Damping
+        <div class="item__damp">Damping
           <div>Slow Bump Front: ${item.damping.slowBumpFront}</div>
           <div>Slow Rebound Front: ${item.damping.slowReboundFront}</div>
           <div>Slow Bump Rear: ${item.damping.slowBumpRear}</div>
           <div>Slow Rebound Rear: ${item.damping.slowReboundRear}</div>
         </div>
 
-        <div class="setup__item-springs">Springs
+        <div class="item__springs">Springs
           <div>Ride Height Front: ${item.springs.rideHeightFront} mm</div>
           <div>Spring Rate Front: ${item.springs.springRateFront} N/mm</div>
           <div>Ride Height Rear: ${item.springs.rideHeightRear} mm</div>
@@ -612,18 +617,20 @@ function h() {
 // add class selected and clas setup__item--active
 function s(item) {
   setupItems[item].classList.toggle('selected');
-  setupItems[item].lastElementChild.classList.toggle('setup__item--active');
+  setupItems[item].lastElementChild.classList.toggle(
+    'setup-country__item--active'
+  );
 }
 
 const setupsParent = document.querySelectorAll('.car-card__setups');
-const setupItems = document.querySelectorAll('.setup__country');
+const setupItems = document.querySelectorAll('.setup-country');
 
 // click on the class setups
 setupsParent.forEach((item) => {
   item.addEventListener('click', (e) => {
     const t = e.target;
     console.log(t);
-    if (t && t.classList.contains('setup__country')) {
+    if (t && t.classList.contains('setup-country')) {
       setupItems.forEach((item, i) => {
         if (t == item) {
           h();
