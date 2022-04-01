@@ -561,7 +561,6 @@ setupsDB.forEach((item) => {
 //   });
 // });
 
-//ЭТО Я ДОПИСАЛ
 const carCards = document.querySelectorAll('.car-card');
 const cardsParent = document.querySelector('.main');
 
@@ -586,7 +585,7 @@ cardsParent.addEventListener('click', (e) => {
     carCards.forEach((item, i) => {
       if (target.parentElement.parentNode == item) {
         console.log(item);
-        // hide();
+        hide();
         show(i);
       }
     });

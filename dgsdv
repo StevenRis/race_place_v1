@@ -1,0 +1,119 @@
+[33mcommit 44711e635adb1c27f8a85856161592dea5cdedf4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 1f4c119 c844281
+Author: Stanisław Griszko <71280629+StevenRis@users.noreply.github.com>
+Date:   Tue Mar 1 13:13:45 2022 +0100
+
+    Merge pull request #5 from StevenRis/css
+    
+    Css
+
+[33mcommit c844281a7bca3bfc641b490873ce7f0496c810b4[m[33m ([m[1;31morigin/css[m[33m, [m[1;32mcss[m[33m)[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Tue Mar 1 13:13:26 2022 +0100
+
+    making css
+
+[33mcommit 7666c85c6a13943f350c2b8b393728dda0e6d806[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Fri Feb 25 12:38:24 2022 +0100
+
+    fix clicking on cars img
+
+[33mcommit 1f4c1191b850b1a756e95ccc558563275aed164b[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Feb 24 17:02:40 2022 +0100
+
+    rename class tree to main
+
+[33mcommit 579cadd028b8f861e5dc6fb90ae01af623d90f05[m
+Merge: 17a8bc3 c6bcf8d
+Author: Stanisław Griszko <71280629+StevenRis@users.noreply.github.com>
+Date:   Mon Feb 14 10:05:26 2022 +0100
+
+    Merge pull request #4 from StevenRis/setupDBfill
+    
+    start building layout
+
+[33mcommit c6bcf8d98d784e98e83965c028b4efa8d58e0e3a[m[33m ([m[1;31morigin/setupDBfill[m[33m)[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Mon Feb 14 09:49:41 2022 +0100
+
+    start building layout
+
+[33mcommit 21d49543a1cef6c02f43ff0f61df6056e567776f[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Feb 10 19:42:26 2022 +0100
+
+    fill in setup db with cars setups data
+
+[33mcommit 6f12045a701136d7a9fb76c15b1273e7ae3ad057[m[33m ([m[1;31morigin/test2[m[33m)[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 22:38:13 2022 +0100
+
+    add eventlistener to the tree class to remove active class when clicking on tree
+
+[33mcommit 7a96b86f678f7d4d9be99ceb3d656265f8543a18[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 22:30:25 2022 +0100
+
+    add toggle to functions
+
+[33mcommit 43fc874197531861651cbfca325645babb8c248c[m[33m ([m[1;31morigin/test[m[33m)[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 21:28:14 2022 +0100
+
+    fix const setupsParent to querySelectorAll and it works
+
+[33mcommit 0f7069293f04ef1cfe4559276c07bb3961b5ba01[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 20:59:06 2022 +0100
+
+    add function hide and show that remove and add classes
+
+[33mcommit 565f2bf1d6d1dce45afb287d830dd35343f1c6f7[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 19:15:38 2022 +0100
+
+    fix
+
+[33mcommit 5c3efcab079b5cf018cd40ae119f8d3fdea0b356[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Wed Feb 9 19:13:57 2022 +0100
+
+    1st commit
+
+[33mcommit 17a8bc3508201b72b418924746f52bb989991fda[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Fri Jan 28 12:11:21 2022 +0100
+
+    fixed
+
+[33mcommit b3d50f4ca50c9e1677f6c84ebc122c30ce4ceb89[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Mon Jan 24 21:08:04 2022 +0100
+
+    add class to car and css
+
+[33mcommit fd1aca186a62a877c21499a3843238a1aaf6f3ca[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Sat Jan 22 00:24:59 2022 +0100
+
+    make select country due to car, and database of setup(started)
+
+[33mcommit 475b25ec03562aace4b8a023977b04a2b3199e64[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Mon Jan 17 23:31:53 2022 +0100
+
+    add select for cars and js code to operate the selection
+
+[33mcommit 0365c54f415655a20b26731da5498b96f50e8e2e[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Jan 13 00:39:42 2022 +0100
+
+    add bg change
+
+[33mcommit ce778ba93827bc51594b97b72d9ca68e45f8d25a[m
+Author: Stanisław Griszko <s.griszko@gmail.com>
+Date:   Thu Jan 13 00:18:40 2022 +0100
+
+    first commit

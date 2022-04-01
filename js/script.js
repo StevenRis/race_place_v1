@@ -1,366 +1,798 @@
-'use sctrict';
+'use strict';
 
-const carsDB = [
-  {
-    id: 1,
-    car: 'Mini Cooper S',
-    setup: [
-      {
-        argentina: {
-          tyres: 'Soft',
-          conditions: 'Dry',
+window.addEventListener('DOMContentLoaded', () => {
+  const setupsDB = [
+    {
+      id: 1,
+      carName: 'Subaru Impreza S4 WRX',
+      img: 'img/car-img/subimpr.png',
+      setup: [
+        {
+          country: 'Argentina',
+          tyres: 'soft',
+          conditions: 'dry',
           alignment: {
-            'Toe Angle Front': -0.2,
-            'Camber Angle Front': -0.9,
-            'Toe Angle Rear': -0,
-            'Camber Angle Rear': -0.97,
+            toeAngleFront: -0.2,
+            camberAngleFront: -1.25,
+            toeAngleRear: -0,
+            camberAngleRear: -1.13,
+          },
+          brakes: {
+            brakingForce: 3.484,
+            // add N-m
+            brakeBias: 59,
+            // add %
+          },
+          differential: {
+            frontLSDDrivingLock: 0,
+            frontLSDBrakingLock: 0,
+            // add N-m
+            frontLSDPreload: 0,
+            frontVisDif: 24,
+            centerVisDif: 22,
+            rearVisDif: 24,
+            // kgf-m/100rpm
+          },
+          gearing: {
+            gear1: 0.311,
+            gear2: 0.402,
+            gear3: 0.538,
+            gear4: 0.7,
+            gear5: 0.887,
+            gear6: 1.099,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: '6500 rpm',
+          },
+          damping: {
+            slowBumpFront: 0,
+            fastBumpFront: 3,
+            bumpZoneDivFront: 0.96,
+            //ms
+            slowReboundFront: 2.0,
+            slowBumpRear: 0,
+            fastBumpRear: 3,
+            bumpZoneDivRear: 0.96,
+            //ms
+            slowReboundRear: 2.0,
+          },
+          springs: {
+            rideHeightFront: 30,
+            // add mm
+            springRateFront: 86.3,
+            // add N/mm
+            rollBarFront: 10.0,
+            //add N/mm
+            rideHeightRear: 30,
+            // add mm
+            springRateRear: 70.22,
+            // add N/mm
+            rollBarFront: 23.69,
+            // N/mm
+          },
+        },
+        {
+          country: 'Australia',
+          tyres: 'soft',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -1.75,
+            toeAngleRear: 0,
+            camberAngleRear: -1.63,
+          },
+          brakes: {
+            brakingForce: 3.484,
+            // add N-m
+            brakeBias: 66,
+            // add %
+          },
+          differential: {
+            frontLSDDrivingLock: 0,
+            frontLSDBrakingLock: 0,
+            // add N-m
+            frontLSDPreload: 0,
+            frontVisDif: 18,
+            centerVisDif: 12,
+            rearVisDif: 18,
+            // kgf-m/100rpm
+          },
+          gearing: {
+            gear1: 0.336,
+            gear2: 0.451,
+            gear3: 0.612,
+            gear4: 0.8,
+            gear5: 1.011,
+            gear6: 1.247,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: '6500 rpm',
+          },
+          damping: {
+            slowBumpFront: +1.0,
+            fastBumpFront: +3.0,
+            bumpZoneDivFront: 0.96,
+            //mps
+            slowReboundFront: +2.0,
+            slowBumpRear: +1.0,
+            fastBumpRear: +3.0,
+            bumpZoneDivRear: 0.96,
+            //mps
+            slowReboundRear: +2.0,
+          },
+          springs: {
+            rideHeightFront: 20.0,
+            // add mm
+            springRateFront: 89.73,
+            // add N/mm
+            rollBarFront: 10.0,
+            //add N/mm
+            rideHeightRear: 20.0,
+            // add mm
+            springRateRear: 73.01,
+            // add N/mm
+            rollBarFront: 23.69,
+            // N/mm
+          },
+        },
+        {
+          country: 'Finland',
+          tyres: 'soft',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -1.75,
+            toeAngleRear: 0,
+            camberAngleRear: -1.63,
+          },
+          brakes: {
+            brakingForce: 3.484,
+            // add N-m
+            brakeBias: 66,
+            // add %
+          },
+          differential: {
+            frontLSDDrivingLock: 0,
+            frontLSDBrakingLock: 0,
+            // add N-m
+            frontLSDPreload: 0,
+            frontVisDif: 24,
+            centerVisDif: 22,
+            rearVisDif: 24,
+            // kgf-m/100rpm
+          },
+          gearing: {
+            gear1: 0.286,
+            gear2: 0.411,
+            gear3: 0.582,
+            gear4: 0.78,
+            gear5: 1.001,
+            gear6: 1.247,
+            finalDrive: 0.24,
+            note: 'Final drive: highest 0.240 ',
+            optimalShift: '6500 rpm',
+          },
+          damping: {
+            slowBumpFront: +5.0,
+            fastBumpFront: +5.0,
+            bumpZoneDivFront: 0.96,
+            //mps
+            slowReboundFront: +4.0,
+            slowBumpRear: +5.0,
+            fastBumpRear: +5.0,
+            bumpZoneDivRear: 0.96,
+            //mps
+            slowReboundRear: +4.0,
+          },
+          springs: {
+            rideHeightFront: 30.0,
+            // add mm
+            springRateFront: 117.09,
+            // add N/mm
+            rollBarFront: 18.0,
+            //add N/mm
+            rideHeightRear: 30.0,
+            // add mm
+            springRateRear: 95.28,
+            // add N/mm
+            rollBarFront: 40.92,
+            // N/mm
+          },
+        },
+        {
+          country: 'Germany/dry',
+          tyres: 'soft',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -1.95,
+            toeAngleRear: 0,
+            camberAngleRear: -1.83,
+          },
+          brakes: {
+            brakingForce: 3.906,
+            // add N-m
+            brakeBias: 58,
+            // add %
+          },
+          differential: {
+            frontLSDDrivingLock: 0,
+            frontLSDBrakingLock: 0,
+            // add N-m
+            frontLSDPreload: 0,
+            frontVisDif: 24,
+            centerVisDif: 18,
+            rearVisDif: 24,
+            // kgf-m/100rpm
+          },
+          gearing: {
+            gear1: 0.286,
+            gear2: 0.411,
+            gear3: 0.582,
+            gear4: 0.78,
+            gear5: 1.001,
+            gear6: 1.247,
+            finalDrive: 0.225,
+            note: 'Final drive: highest 0.225 ',
+            optimalShift: '6500 rpm',
+          },
+          damping: {
+            slowBumpFront: +3.0,
+            fastBumpFront: +4.0,
+            bumpZoneDivFront: 0.14,
+            //mps
+            slowReboundFront: +4.0,
+            slowBumpRear: +3.0,
+            fastBumpRear: +4.0,
+            bumpZoneDivRear: 0.14,
+            //mps
+            slowReboundRear: +4.0,
+          },
+          springs: {
+            rideHeightFront: -40.0,
+            // add mm
+            springRateFront: 196.09,
+            // add N/mm
+            rollBarFront: 18.11,
+            //add N/mm
+            rideHeightRear: -40.0,
+            // add mm
+            springRateRear: 159.49,
+            // add N/mm
+            rollBarFront: 42.08,
+            // N/mm
+          },
+        },
+        {
+          country: 'Germany/wet',
+          tyres: 'soft',
+          conditions: 'wet',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -1.65,
+            toeAngleRear: 0,
+            camberAngleRear: -1.5,
+          },
+          brakes: {
+            brakingForce: 3.627,
+            // add N-m
+            brakeBias: 58,
+            // add %
+          },
+          differential: {
+            frontLSDDrivingLock: 0,
+            frontLSDBrakingLock: 0,
+            // add N-m
+            frontLSDPreload: 0,
+            frontVisDif: 16,
+            centerVisDif: 14,
+            rearVisDif: 16,
+            // kgf-m/100rpm
+          },
+          gearing: {
+            gear1: 0.286,
+            gear2: 0.411,
+            gear3: 0.582,
+            gear4: 0.78,
+            gear5: 1.001,
+            gear6: 1.247,
+            finalDrive: 0.225,
+            note: 'Final drive: highest 0.225 ',
+            optimalShift: '6500 rpm',
+          },
+          damping: {
+            slowBumpFront: +2.0,
+            fastBumpFront: +3.0,
+            bumpZoneDivFront: 0.14,
+            //mps
+            slowReboundFront: +3.0,
+            slowBumpRear: +2.0,
+            fastBumpRear: +3.0,
+            bumpZoneDivRear: 0.14,
+            //mps
+            slowReboundRear: +3.0,
+          },
+          springs: {
+            rideHeightFront: -36.0,
+            // add mm
+            springRateFront: 183.83,
+            // add N/mm
+            rollBarFront: 14.23,
+            //add N/mm
+            rideHeightRear: -36.0,
+            // add mm
+            springRateRear: 149.59,
+            // add N/mm
+            rollBarFront: 34.65,
+            // N/mm
+          },
+        },
+      ],
+    },
+    {
+      id: 2,
+      car: 'Ford Focus ST',
+      img: 'img/car-img/ffocus.png',
+
+      setup: [
+        {
+          country: 'Argentina',
+          tyres: 'soft',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -0.9,
+            toeAngleRear: -0,
+            camberAngleRear: -0.97,
           },
           brakes: {
             // add N-m
-            'Braking Force': 1.298,
+            brakingForce: 1.298,
             // add %
-            'Brake Bias': 58,
+            brakeBias: 58,
           },
           differential: {
             // add %
-            'Front LSD Driving Lock': 36,
-            'Front LSD Braking Lock': 40,
+            frontLSDDrivingLock: 36,
+            frontLSDBrakingLock: 40,
             // add N-m
-            'Front LSD Preload': 100,
+            frontLSDPreload: 100,
           },
           gearing: {
-            '1st Gear': 0.393,
-            '2nd Gear': 0.524,
-            '3rd Gear': 0.73,
-            '4th Gear': 1.009,
-            'Final Drive': 0.21,
-            Note: 'Final drive: Minimum ',
-            'Optimal Shift': 'Redline',
+            fstGear: 0.393,
+            sndGear: 0.524,
+            thrdGear: 0.73,
+            forthGear: 1.009,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: 'Redline',
           },
           damping: {
-            'Slow Bump Front': -2,
-            'Slow Rebound Front': -1,
-            'Slow Bump Rear': -2,
-            'Slow Rebound': -1,
+            slowBumpFront: -2,
+            slowReboundFront: -1,
+            slowBumpRear: -2,
+            slowRebound: -1,
           },
           springs: {
             // add mm
-            'Ride Height Front': -20,
+            rideHeightFront: -20,
             // add N/mm
-            'Spring Rate Front': 102.26,
+            springRateFront: 102.26,
             // add mm
-            'ride Height Rear': -20,
+            rideHeightRear: -20,
             // add N/mm
-            'Spring Rate Rear': 12.5,
+            springRateRear: 12.5,
           },
         },
-      },
-      {
-        australia: {
-          tyres: 'Medium',
-          conditions: 'Wet',
+
+        {
+          country: 'Finland',
+          tyres: 'soft',
+          conditions: 'wet',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -0.9,
+            toeAngleRear: -0,
+            camberAngleRear: -0.97,
+          },
+          brakes: {
+            // add N-m
+            brakingForce: 1.298,
+            // add %
+            brakeBias: 58,
+          },
+          differential: {
+            // add %
+            frontLSDDrivingLock: 36,
+            frontLSDBrakingLock: 40,
+            // add N-m
+            frontLSDPreload: 100,
+          },
+          gearing: {
+            fstGear: 0.393,
+            sndGear: 0.524,
+            thrdGear: 0.73,
+            forthGear: 1.009,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: 'Redline',
+          },
+          damping: {
+            slowBumpFront: -2,
+            slowReboundFront: -1,
+            slowBumpRear: -2,
+            slowRebound: -1,
+          },
+          springs: {
+            // add mm
+            rideHeightFront: -20,
+            // add N/mm
+            springRateFront: 102.26,
+            // add mm
+            rideHeightRear: -20,
+            // add N/mm
+            springRateRear: 12.5,
+          },
         },
-      },
-      {
-        finland: {
-          tyres: 'Medium',
-          conditions: 'Wet',
+
+        {
+          country: 'Scotland',
+          tyres: 'soft',
+          conditions: 'wet',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -0.9,
+            toeAngleRear: -0,
+            camberAngleRear: -0.97,
+          },
+          brakes: {
+            // add N-m
+            brakingForce: 1.298,
+            // add %
+            brakeBias: 58,
+          },
+          differential: {
+            // add %
+            frontLSDDrivingLock: 36,
+            frontLSDBrakingLock: 40,
+            // add N-m
+            frontLSDPreload: 100,
+          },
+          gearing: {
+            fstGear: 0.393,
+            sndGear: 0.524,
+            thrdGear: 0.73,
+            forthGear: 1.009,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: 'Redline',
+          },
+          damping: {
+            slowBumpFront: -2,
+            slowReboundFront: -1,
+            slowBumpRear: -2,
+            slowRebound: -1,
+          },
+          springs: {
+            // add mm
+            rideHeightFront: -20,
+            // add N/mm
+            springRateFront: 102.26,
+            // add mm
+            rideHeightRear: -20,
+            // add N/mm
+            springRateRear: 12.5,
+          },
         },
-      },
-    ],
-  },
+      ],
+    },
+    {
+      id: 3,
+      car: 'Mitsubishi Lancer VII',
+      img: 'img/car-img/mitslancer.png',
 
-  {
-    id: 2,
-    car: 'Lancia Fulvia HF',
-  },
+      setup: [
+        {
+          country: 'Wales',
+          tyres: 'hard',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -0.9,
+            toeAngleRear: -0,
+            camberAngleRear: -0.97,
+          },
+          brakes: {
+            // add N-m
+            brakingForce: 1.298,
+            // add %
+            brakeBias: 58,
+          },
+          differential: {
+            // add %
+            frontLSDDrivingLock: 36,
+            frontLSDBrakingLock: 40,
+            // add N-m
+            frontLSDPreload: 100,
+          },
+          gearing: {
+            fstGear: 0.393,
+            sndGear: 0.524,
+            thrdGear: 0.73,
+            forthGear: 1.009,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: 'Redline',
+          },
+          damping: {
+            slowBumpFront: -2,
+            slowReboundFront: -1,
+            slowBumpRear: -2,
+            slowRebound: -1,
+          },
+          springs: {
+            // add mm
+            rideHeightFront: -20,
+            // add N/mm
+            springRateFront: 102.26,
+            // add mm
+            rideHeightRear: -20,
+            // add N/mm
+            springRateRear: 12.5,
+          },
+        },
+        {
+          country: 'USA',
+          tyres: 'not hard',
+          conditions: 'dry',
+          alignment: {
+            toeAngleFront: -0.2,
+            camberAngleFront: -0.9,
+            toeAngleRear: -0,
+            camberAngleRear: -0.97,
+          },
+          brakes: {
+            // add N-m
+            brakingForce: 1.298,
+            // add %
+            brakeBias: 58,
+          },
+          differential: {
+            // add %
+            frontLSDDrivingLock: 36,
+            frontLSDBrakingLock: 40,
+            // add N-m
+            frontLSDPreload: 100,
+          },
+          gearing: {
+            fstGear: 0.393,
+            sndGear: 0.524,
+            thrdGear: 0.73,
+            forthGear: 1.009,
+            finalDrive: 0.21,
+            note: 'Final drive: Minimum ',
+            optimalShift: 'Redline',
+          },
+          damping: {
+            slowBumpFront: -2,
+            slowReboundFront: -1,
+            slowBumpRear: -2,
+            slowRebound: -1,
+          },
+          springs: {
+            // add mm
+            rideHeightFront: -20,
+            // add N/mm
+            springRateFront: 102.26,
+            // add mm
+            rideHeightRear: -20,
+            // add N/mm
+            springRateRear: 12.5,
+          },
+        },
+      ],
+    },
+  ];
 
-  {
-    id: 3,
-    car: 'Citroen DS 21',
-  },
-];
+  let tree = document.querySelector('.main');
 
-// console.log(carsDB[0].setup[0].argentina.alignment['Toe Angle Front']);
-console.log(JSON.stringify(carsDB));
+  //create cards with cars and setups
+  function createCarCard(dataBase) {
+    dataBase.forEach((car) => {
+      const carCard = document.createElement('div');
+      carCard.classList.add('car-card');
+      carCard.innerHTML = `
+        <div class="car-card__title"><span>${car.carName}</span></div>
+        <div class='car-card__image'>
+            <img src="${car.img}" alt="">
+        </div>
+        <div class="car-card__setups setups"></div>
+  `;
+      tree.append(carCard);
 
-const countryDB = [
-  {
-    country: [
-      'Argentina',
-      'Australia',
-      'Finland',
-      'Germany',
-      'Greece',
-      'Monaco',
-      'New Zealand',
-      'Poland',
-      'Spain',
-      'Sweden',
-      'USA',
-      'Wales',
-      'Scotland',
-    ],
-  },
-];
+      let setups = document.querySelectorAll('.car-card__setups');
 
-class MenuCard {
-  constructor(
-    src,
-    alt,
-    title,
-    country,
-    tyres,
-    conditions,
-    alignment,
-    parentSelector,
-    ...classes
-  ) {
-    this.src = src;
-    this.alt = alt;
-    this.title = title;
-    this.country = country;
-    this.tyres = tyres;
-    this.conditions = conditions;
-    this.alignment = alignment;
-    this.classes = classes;
-    this.parent = document.querySelector(parentSelector);
+      car.setup.forEach((setup) => {
+        const el = document.createElement('div');
+        el.classList.add('setup-country');
+        el.innerHTML = `
+        ${setup.country}
+    
+        <div class="setup-country__item">
+            <div class="item__tyres">
+                <span>Tyres</span>
+                <span>${setup.tyres}</span>
+            </div>
+            
+            <div class="item__conditions">
+                <span>Conditions</span>
+                <span>${setup.conditions}</span>
+            </div>
+
+            <div class="item__alignment">
+                <span>Alignment</span> 
+                <div>Toe Angle Front: ${setup.alignment.toeAngleFront} °</div>
+                <div>Camber Angle Front: ${setup.alignment.camberAngleFront} °</div>
+                <div>Toe Angle Rear: ${setup.alignment.toeAngleRear} °</div>
+                <div>Camber Angle Rear: ${setup.alignment.camberAngleRear} °</div>
+            </div>
+
+            <div class="item__brakes">
+                <span>Brakes</span> 
+                <div>Brake Bias: ${setup.brakes.brakingForce} N-m</div>
+                <div>Braking force: ${setup.brakes.brakeBias} %</div>
+            </div>
+
+            <div class="item__dif">
+                <span>Differential</span>
+                <div>Front LSD Driving lock: ${setup.differential.frontLSDDrivingLock} %</div>
+                <div>Front LSD Braking Lock: ${setup.differential.frontLSDBrakingLock} %</div>
+                <div>Front LSD Preload: ${setup.differential.frontLSDPreload} N-m</div>
+                <div>Front Viscous Differential: ${setup.differential.frontVisDif} kgf-m/100 rpm</div>
+                <div>Centre Viscous Differential: ${setup.differential.centerVisDif} kgf-m/100 rpm</div>
+                <div>Rear Viscous Differential: ${setup.differential.rearVisDif} kgf-m/100 rpm</div>
+            </div>
+
+            <div class="item__gear">Gearing
+                <div>1st Gear: ${setup.gearing.gear1}</div>
+                <div>2nt Gear: ${setup.gearing.gear2}</div>
+                <div>3rd Gear: ${setup.gearing.gear3}</div>
+                <div>4th Gear: ${setup.gearing.gear4}</div>
+                <div>4th Gear: ${setup.gearing.gear5}</div>
+                <div>4th Gear: ${setup.gearing.gear6}</div>
+                <div>Final Drive: ${setup.gearing.finalDrive}</div>
+                <div>Note: ${setup.gearing.note}</div>
+                <div>Optimal Shift: ${setup.gearing.optimalShift}</div>
+            </div>
+
+            <div class="item__damp">Damping
+                <div>Slow Bump Front: ${setup.damping.slowBumpFront}</div>
+                <div>Slow Rebound Front: ${setup.damping.slowReboundFront}</div>
+                <div>Slow Bump Rear: ${setup.damping.slowBumpRear}</div>
+                <div>Slow Rebound Rear: ${setup.damping.slowReboundRear}</div>
+            </div>
+
+            <div class="item__springs">Springs
+                <div>Ride Height Front: ${setup.springs.rideHeightFront} mm</div>
+                <div>Spring Rate Front: ${setup.springs.springRateFront} N/mm</div>
+                <div>Ride Height Rear: ${setup.springs.rideHeightRear} mm</div>
+                <div>Spring Rate Rear: ${setup.springs.springRateRear} N/mm</div>
+            </div>
+        </div>
+        `;
+        setups.forEach((item) => {
+          item.appendChild(el);
+        });
+      });
+    });
   }
+  createCarCard(setupsDB);
 
-  render() {
-    const element = document.createElement('div');
-    if (this.classes.length === 0) {
-      this.element = 'car__item';
-      element.classList.add(this.element);
-    } else {
-      this.classes.forEach((className) => element.classList.add(className));
-    }
+  const carCards = document.querySelectorAll('.car-card'),
+    cardsParent = document.querySelector('.main');
 
-    element.innerHTML = `
-      <img src=${this.src} alt=${this.alt} />
-      <h3 class="car__item-title">Car: ${this.title}</h3>
-      <div class="car__item-country">Country: ${this.country}</div>
-      <div class="car__item-setup">
-        <div class="menu__item-tyres">Tyres: ${this.tyres}</div>
-        <div class="menu__item-conditions">Conditions: ${this.conditions}</div>
-        <div class="menu__item-conditions">Toe Angle Front: ${this.alignment}</div>
-      </div>
-      `;
-    this.parent.append(element);
-  }
-}
-
-// first card
-// new MenuCard(
-//   'img/carInfo/Mini_Copper_S.png',
-//   'Mini Cooper S',
-//   'Mini Cooper S',
-//   'Argentina',
-//   'Soft',
-//   'Dry',
-//   -0.2,
-//   '.cars__setup'
-// ).render();
-
-// variables
-const countryList = document.querySelector('#country');
-const enterBtn = document.querySelector('.enter-screen__title');
-const enterScreen = document.querySelector('.enter-screen');
-const cars = document.querySelector('.cars');
-const countries = document.querySelector('.countries');
-const selectCar = document.querySelector('#cars');
-const selectCountry = document.querySelector('#country');
-
-// 1st select - load the list of cars
-function setCar(car) {
-  for (let i = 0; i < car.length; i++) {
-    const el = document.createElement('option');
-    el.innerHTML = car[i].car;
-    el.value = car[i].car;
-    document.querySelector('#cars').append(el);
-  }
-}
-setCar(carsDB);
-
-// 2nd select - load the list of countries
-function setCountry(country) {
-  for (let i = 0; i < country.length; i++) {
-    const el = document.createElement('option');
-    el.innerHTML = country[i];
-    el.value = country[i];
-    document.querySelector('#country').append(el);
-  }
-}
-
-// show the country list if the car is chosen
-function chooseCarName() {
-  selectCar.addEventListener('change', () => {
-    console.log(`${selectCar.selectedIndex} ${selectCar.value}`);
-
-    if (selectCar.selectedIndex <= 8) {
-      setCountry(countryDB[0].country);
-    } else {
-      console.log(`FUCK OFF`);
+  //click on the class main (event delegations)
+  cardsParent.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.tagName == 'IMG') {
+      carCards.forEach((item, i) => {
+        if (target.parentElement.parentNode == item) {
+          console.log(item);
+          hide();
+          show(i);
+        }
+      });
     }
   });
 
-  // checks index of the 2nd select and calls the functions, that set Country and compare a car with a country
-  selectCountry.addEventListener('change', () => {
-    console.log(`${selectCountry.selectedIndex} ${selectCountry.value}`);
-    switch (selectCountry.selectedIndex) {
-      case 1:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 2:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 3:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 4:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 5:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 6:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 7:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 8:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 9:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 10:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 11:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 12:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      case 13:
-        setCountry(countryDB[0].country);
-        compare();
-        break;
-      default:
-        console.log('error');
-    }
+  const setupsParent = document.querySelectorAll('.car-card__setups'),
+    setupItems = document.querySelectorAll('.setup-country');
+  // click on the class setups
+  setupsParent.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      const t = e.target;
+      //   console.log(t);
+      if (t && t.classList.contains('setup-country')) {
+        setupItems.forEach((item, i) => {
+          if (t == item) {
+            h();
+            s(i);
+          }
+        });
+      }
+    });
   });
-}
-chooseCarName();
 
-const setup = document.querySelector('.cars__setup');
+  // remove class selected and class setups--active
+  function hide() {
+    carCards.forEach((item) => {
+      item.classList.remove('hide');
+      item.classList.remove('selected');
+      item.lastElementChild.classList.remove('car-card__setups-active');
+    });
+    h();
+  }
 
-function showSetup(setups, parent, tyres, alignment) {
-  parent.innerHTML = '';
-  const el = document.createElement('div');
-  el.innerHTML += `
-    <span>Conditions: ${setups}</span>
-    <span>Tyres: ${tyres}</span>
-    <span>Alignment: ${alignment}</span>
+  // add class 'selected' to car card
+  // and class 'setup--active' to car-card__setups
+  function show(item) {
+    carCards[item].classList.add('selected');
+    carCards[item].lastElementChild.classList.add('car-card__setups-active');
+    carCards.forEach((card) => {
+      if (!card.classList.contains('selected')) {
+        card.classList.add('hide');
+      }
+    });
+  }
 
+  // remove class selected and setup__item--active
+  function h() {
+    setupItems.forEach((item) => {
+      item.classList.remove('selected');
+      item.lastElementChild.classList.remove('setup-country__item--active');
+    });
+  }
 
-    `;
-  parent.append(el);
-}
-
-function compare() {
-  if (selectCar.selectedIndex === 1 && selectCountry.selectedIndex === 1) {
-    console.log('this will show the setup');
-    new MenuCard(
-      'img/carInfo/Mini_Copper_S.png',
-      'Mini Cooper S',
-      'Mini Cooper S',
-      'Argentina',
-      'Soft',
-      'Dry',
-      -0.2,
-      '.cars__setup'
-    ).render();
-    // showSetup(
-    //   carsDB[0].setup[0].argentina.conditions,
-    //   setup,
-    //   carsDB[0].setup[0].argentina.tyres,
-    //   carsDB[0].setup[0].argentina.alignment['Toe Angle Front']
-    // );
-  } else if (
-    selectCar.selectedIndex === 1 &&
-    selectCountry.selectedIndex === 2
-  ) {
-    console.log('this will show the setup');
-    showSetup(
-      carsDB[0].setup[1].australia.conditions,
-      setup,
-      carsDB[0].setup[1].australia.tyres
+  // add class selected and clas setup__item--active
+  function s(item) {
+    setupItems[item].classList.add('selected');
+    setupItems[item].lastElementChild.classList.add(
+      'setup-country__item--active'
     );
-  } else {
-    setup.innerHTML = '';
-    console.log('error');
   }
-}
 
-// ENTER SCREEN ///////
-enterBtn.addEventListener('click', () => {
-  loadSelectionPage();
+  //click on background closes each car card
+  cardsParent.addEventListener('click', (e) => {
+    if (e.target.classList.contains('main')) {
+      hide();
+    }
+  });
+
+  ///////// ENTER SCREEN /; //////
+  const enterBtn = document.querySelector('.enter-screen__title');
+  const enterScreen = document.querySelector('.enter-screen');
+  const main = document.querySelector('.main__bg');
+
+  enterBtn.addEventListener('click', () => {
+    loadSelectionPage();
+  });
+
+  function loadSelectionPage() {
+    addHide();
+    removeHide();
+    changeBG();
+  }
+
+  function addHide() {
+    enterScreen.classList.add('hide');
+  }
+
+  function removeHide() {
+    main.classList.remove('hide');
+  }
+
+  function changeBG() {
+    document.querySelector('.main').style.backgroundImage =
+      'url(../img/selectionPage-bg.jpg)';
+  }
 });
-
-function loadSelectionPage() {
-  addHide();
-  removeHide();
-  cars.classList.add('show');
-  countries.classList.add('show');
-  changeBG();
-}
-
-function addHide() {
-  enterScreen.classList.add('hide');
-}
-
-function removeHide() {
-  cars.classList.remove('hide');
-  countries.classList.remove('hide');
-}
-
-function changeBG() {
-  document.querySelector('main').style.backgroundImage =
-    'url(../img/selectionPage-bg.jpg)';
-}
-
-// const cars = document.querySelector('.cars');
-
-// //show 3 cards with car name, country and so on
-// function showcarDB(cars) {
-//   const element = document.createElement('div');
-//   console.log(cars);
-//   cars.forEach((car) => {
-//     element.classList.add('car-card');
-//     element.innerHTML += `
-//         <div class="car-card__item">
-//             <span>${car.car}</span>
-//             <span>${car.setup[0].country}</span>
-//             <span>${car.setup[0].conditions}</span>
-//             <span>${car.setup[0].tyres}</span>
-//         </div>
-//     `;
-//   });
-//   document.querySelector('.cars').append(element);
-// }
-// showcarDB(carsDB);

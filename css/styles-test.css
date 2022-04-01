@@ -3,14 +3,12 @@
 ::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
   /*10px*/
   scroll-behavior: smooth;
@@ -29,7 +27,6 @@ body {
   background-position: center;
   max-width: 100%;
   filter: blur(8px);
-  -webkit-filter: blur(8px);
 }
 
 .enter-screen {
@@ -41,12 +38,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .enter-screen__title {
@@ -64,18 +57,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .main span {
@@ -85,19 +73,15 @@ body {
 .car-card {
   position: relative;
   bottom: 25%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 2em;
   color: #ffffff;
   text-align: center;
   background-color: #000616;
-  -webkit-box-shadow: 4px 4px 8px #888888, -4px -4px 8px #1d1a1a;
-          box-shadow: 4px 4px 8px #888888, -4px -4px 8px #1d1a1a;
+  box-shadow: 4px 4px 8px #888888, -4px -4px 8px #1d1a1a;
   border-radius: 10px;
   padding: 0.5em 1em;
-  margin: 20px 20px;
+  margin: 50px 20px;
   cursor: pointer;
 }
 
@@ -122,12 +106,9 @@ body {
 .setup-country {
   color: #ffffff;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #0f1d2c;
-  -webkit-box-shadow: 4px 4px 8px #63dbc5, -4px -4px 8px #63dbc5;
-          box-shadow: 4px 4px 8px #63dbc5, -4px -4px 8px #63dbc5;
+  box-shadow: 4px 4px 8px #63dbc5, -4px -4px 8px #63dbc5;
   border-radius: 10px;
   padding: 1em 1em;
   margin: 20px 20px;
@@ -143,18 +124,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
   margin: 5px;
   padding: 10px;
-  -webkit-box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
-          box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
+  box-shadow: 4px 4px 8px #1d1a1a, -4px -4px 8px #bbcfd1;
   border-radius: 10px;
   /* height: fit-content; */
   /* border: 1px solid black; */
@@ -172,8 +147,7 @@ body {
 }
 
 .selected {
-  -webkit-box-shadow: 4px 4px 8px #f17657, -4px -4px 8px #63dbc5;
-          box-shadow: 4px 4px 8px #f17657, -4px -4px 8px #63dbc5;
+  box-shadow: 4px 4px 8px #f17657, -4px -4px 8px #63dbc5;
 }
 
 .hide {
@@ -183,4 +157,3 @@ body {
 .show {
   display: block;
 }
-/*# sourceMappingURL=styles-test.css.map */
