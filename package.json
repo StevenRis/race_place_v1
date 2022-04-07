@@ -1,0 +1,22 @@
+{
+  "name": "race_place",
+  "version": "1.0.0",
+  "description": "setups for cars in Dirt Rally 2.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenRis/race_place.git"
+  },
+  "author": "stevenri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenRis/race_place/issues"
+  },
+  "homepage": "https://github.com/StevenRis/race_place#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}

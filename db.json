@@ -1,0 +1,1112 @@
+[
+  {
+    "id": 1,
+    "carName": "Subaru Impreza S4 WRX",
+    "img": "img/car-img/subimpr.png",
+    "setup": [
+      {
+        "country": "Argentina",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.25",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.13"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "59"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "22",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.311",
+          "gear2": "0.402",
+          "gear3": "0.538",
+          "gear4": "0.700",
+          "gear5": "0.887",
+          "gear6": "1.099",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum ",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "0.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+2.00",
+          "slowBumpRear": "0.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+2.0"
+        },
+        "springs": {
+          "rideHeightFront": "30.00",
+          "springRateFront": "86.30",
+          "rollBarFront": "10.00",
+          "rideHeightRear": "30.00",
+          "springRateRear": "70.22",
+          "rollBarRear": "23.69"
+        }
+      },
+      {
+        "country": "Australia",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "18",
+          "centerVisDif": "12",
+          "rearVisDif": "18"
+        },
+        "gearing": {
+          "gear1": "0.336",
+          "gear2": "0.451",
+          "gear3": "0.612",
+          "gear4": "0.800",
+          "gear5": "1.011",
+          "gear6": "1.247",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum ",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+1.00",
+          "fastBumpFront": "+3.0",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+2.00",
+          "slowBumpRear": "+1.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+2.00"
+        },
+        "springs": {
+          "rideHeightFront": "20.00",
+          "springRateFront": "89.73",
+          "rollBarFront": "10.00",
+          "rideHeightRear": "20.00",
+          "springRateRear": "73.01",
+          "rollBarRear": "23.69"
+        }
+      },
+      {
+        "country": "Finland",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "22",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.582",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.240",
+          "note": "Final drive: highest 0.240 ",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+5.00",
+          "fastBumpFront": "+5.00",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+5.00",
+          "fastBumpRear": "+5.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "30.00",
+          "springRateFront": "117.09",
+          "rollBarFront": "18.00",
+          "rideHeightRear": "30.00",
+          "springRateRear": "95.28",
+          "rollBarRear": "40.92"
+        }
+      },
+      {
+        "country": "Germany/dry",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.95",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.83"
+        },
+        "brakes": {
+          "brakingForce": "3.906",
+          "brakeBias": "58"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "18",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.582",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.225",
+          "note": "Final drive: highest 0.225 ",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+3.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+3.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "-40.00",
+          "springRateFront": "196.09",
+          "rollBarFront": "18.11",
+          "rideHeightRear": "-40.00",
+          "springRateRear": "159.49",
+          "rollBarRear": "42.08"
+        }
+      },
+      {
+        "country": "Germany/wet",
+        "tyres": "soft",
+        "conditions": "wet",
+        "alignment": {
+          "toeAngleFront": "-0.2",
+          "camberAngleFront": "-1.65",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.50"
+        },
+        "brakes": {
+          "brakingForce": "3.627",
+          "brakeBias": "58"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "16",
+          "centerVisDif": "14",
+          "rearVisDif": "16"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.582",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.225",
+          "note": "Final drive: highest 0.225 ",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+2.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+2.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "-36.00",
+          "springRateFront": "183.83",
+          "rollBarFront": "14.23",
+          "rideHeightRear": "-36.00",
+          "springRateRear": "149.59",
+          "rollBarRear": "34.65"
+        }
+      },
+      {
+        "country": "Greece",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.50",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.38"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "59"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "18",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.301",
+          "gear2": "0.392",
+          "gear3": "0.528",
+          "gear4": "0.691",
+          "gear5": "0.877",
+          "gear6": "1.089",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+2.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+2.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "20.00",
+          "springRateFront": "95.56",
+          "rollBarFront": "12.00",
+          "rideHeightRear": "20.00",
+          "springRateRear": "78.57",
+          "rollBarRear": "28.00"
+        }
+      },
+      {
+        "country": "Monaco Asphalt",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.95",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.83"
+        },
+        "brakes": {
+          "brakingForce": "3.829",
+          "brakeBias": "58"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "22",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.311",
+          "gear2": "0.416",
+          "gear3": "0.543",
+          "gear4": "0.696",
+          "gear5": "0.872",
+          "gear6": "1.074",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+3.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+3.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "-26.25",
+          "springRateFront": "196.00",
+          "rollBarFront": "18.11",
+          "rideHeightRear": "-26.25",
+          "springRateRear": "159.49",
+          "rollBarRear": "42.08"
+        }
+      },
+      {
+        "country": "Monaco Mixed Short",
+        "tyres": "winters/asphalt",
+        "conditions": "50% Asphalt/ 50% Snow/Ice",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.35",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.00"
+        },
+        "brakes": {
+          "brakingForce": "3.282",
+          "brakeBias": "58"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "16",
+          "centerVisDif": "10",
+          "rearVisDif": "16"
+        },
+        "gearing": {
+          "gear1": "0.311",
+          "gear2": "0.416",
+          "gear3": "0.543",
+          "gear4": "0.696",
+          "gear5": "0.872",
+          "gear6": "1.074",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+1.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+2.00",
+          "slowBumpRear": "+1.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+2.00"
+        },
+        "springs": {
+          "rideHeightFront": "-19.25",
+          "springRateFront": "171.67",
+          "rollBarFront": "12.94",
+          "rideHeightRear": "-19.25",
+          "springRateRear": "139.69",
+          "rollBarRear": "29.70"
+        }
+      },
+      {
+        "country": "Monaco Mixed Long",
+        "tyres": "winter",
+        "conditions": "75% Asphalt/ 25% Snow/Ice",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.50",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.17"
+        },
+        "brakes": {
+          "brakingForce": "3.555.50",
+          "brakeBias": "58"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "14",
+          "centerVisDif": "12",
+          "rearVisDif": "14"
+        },
+        "gearing": {
+          "gear1": "0.311",
+          "gear2": "0.416",
+          "gear3": "0.543",
+          "gear4": "0.696",
+          "gear5": "0.872",
+          "gear6": "1.074",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+2.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+2.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "-22.75",
+          "springRateFront": "183.83",
+          "rollBarFront": "16.82",
+          "rideHeightRear": "-22.75",
+          "springRateRear": "149.59",
+          "rollBarRear": "37.13"
+        }
+      },
+      {
+        "country": "New Zealand",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.63",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.50"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "59"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "18",
+          "centerVisDif": "14",
+          "rearVisDif": "18"
+        },
+        "gearing": {
+          "gear1": "0.336",
+          "gear2": "0.451",
+          "gear3": "0.612",
+          "gear4": "0.800",
+          "gear5": "1.011",
+          "gear6": "1.247",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+1.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.84",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+1.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.84",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "10.00",
+          "springRateFront": "89.72",
+          "rollBarFront": "10.00",
+          "rideHeightRear": "10.00",
+          "springRateRear": "73.01",
+          "rollBarRear": "23.69"
+        }
+      },
+      {
+        "country": "Poland",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "20",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.592",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.245",
+          "note": "Final drive: highest 0.245",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+3.00",
+          "fastBumpFront": "+5.00",
+          "bumpZoneDivFront": "1.08",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+3.00",
+          "fastBumpRear": "+5.00",
+          "bumpZoneDivRear": "1.08",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "20.00",
+          "springRateFront": "103.41",
+          "rollBarFront": "14.00",
+          "rideHeightRear": "20.00",
+          "springRateRear": "84.14",
+          "rollBarRear": "23.31"
+        }
+      },
+      {
+        "country": "Spain",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.95",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.83"
+        },
+        "brakes": {
+          "brakingForce": "4.185",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "24",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.592",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.215",
+          "note": "Final drive: highest 0.225",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+4.00",
+          "fastBumpFront": "+5.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+4.00",
+          "fastBumpRear": "+5.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "-40.00",
+          "springRateFront": "208.16",
+          "rollBarFront": "20.70",
+          "rideHeightRear": "-40.00",
+          "springRateRear": "169.39",
+          "rollBarRear": "44.55"
+        }
+      },
+      {
+        "country": "Spain",
+        "tyres": "soft",
+        "conditions": "wet",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.65",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.50"
+        },
+        "brakes": {
+          "brakingForce": "3.906",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "16",
+          "centerVisDif": "14",
+          "rearVisDif": "16"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.592",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.215",
+          "note": "Final drive: highest 0.225",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+3.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "0.14",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+3.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "0.14",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "-36.00",
+          "springRateFront": "189.91",
+          "rollBarFront": "16.82",
+          "rideHeightRear": "-36.00",
+          "springRateRear": "154.54",
+          "rollBarRear": "37.13"
+        }
+      },
+      {
+        "country": "Sweden",
+        "tyres": "snow",
+        "conditions": "snow",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.38",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.25"
+        },
+        "brakes": {
+          "brakingForce": "3.261",
+          "brakeBias": "59"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "22",
+          "centerVisDif": "18",
+          "rearVisDif": "22"
+        },
+        "gearing": {
+          "gear1": "0.361",
+          "gear2": "0.491",
+          "gear3": "0.642",
+          "gear4": "0.819",
+          "gear5": "1.021",
+          "gear6": "1.247",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+1.00",
+          "fastBumpFront": "+3.00",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+2.00",
+          "slowBumpRear": "+1.00",
+          "fastBumpRear": "+3.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+2.00"
+        },
+        "springs": {
+          "rideHeightFront": "40.00",
+          "springRateFront": "89.72",
+          "rollBarFront": "8.00",
+          "rideHeightRear": "40.00",
+          "springRateRear": "73.01",
+          "rollBarRear": "19.38"
+        }
+      },
+      {
+        "country": "USA",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "59"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "22",
+          "centerVisDif": "18",
+          "rearVisDif": "22"
+        },
+        "gearing": {
+          "gear1": "0.286",
+          "gear2": "0.411",
+          "gear3": "0.582",
+          "gear4": "0.780",
+          "gear5": "1.001",
+          "gear6": "1.247",
+          "finalDrive": "0.235",
+          "note": "Final drive: highest 0.235",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+3.00",
+          "fastBumpFront": "+5.00",
+          "bumpZoneDivFront": "1.08",
+          "slowReboundFront": "+4.00",
+          "slowBumpRear": "+3.00",
+          "fastBumpRear": "+5.00",
+          "bumpZoneDivRear": "1.08",
+          "slowReboundRear": "+4.00"
+        },
+        "springs": {
+          "rideHeightFront": "20.00",
+          "springRateFront": "110.25",
+          "rollBarFront": "16.00",
+          "rideHeightRear": "20.00",
+          "springRateRear": "89.71",
+          "rollBarRear": "36.62"
+        }
+      },
+      {
+        "country": "Wales",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.484",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "18",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.336",
+          "gear2": "0.451",
+          "gear3": "0.612",
+          "gear4": "0.800",
+          "gear5": "1.011",
+          "gear6": "1.247",
+          "finalDrive": "0.210",
+          "note": "Final drive: Minimum",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+2.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "1.08",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+2.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "1.08",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "40.00",
+          "springRateFront": "96.56",
+          "rollBarFront": "11.00",
+          "rideHeightRear": "40.00",
+          "springRateRear": "78.57",
+          "rollBarRear": "25.85"
+        }
+      },
+      {
+        "country": "Scotland",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": "-0.20",
+          "camberAngleFront": "-1.75",
+          "toeAngleRear": "0.00",
+          "camberAngleRear": "-1.63"
+        },
+        "brakes": {
+          "brakingForce": "3.216",
+          "brakeBias": "66"
+        },
+        "differential": {
+          "frontLSDDrivingLock": "not used",
+          "frontLSDBrakingLock": "not used",
+          "frontLSDPreload": "not used",
+          "frontVisDif": "24",
+          "centerVisDif": "22",
+          "rearVisDif": "24"
+        },
+        "gearing": {
+          "gear1": "0.311",
+          "gear2": "0.431",
+          "gear3": "0.597",
+          "gear4": "0.790",
+          "gear5": "1.006",
+          "gear6": "1.247",
+          "finalDrive": "0.235",
+          "note": "Final drive: highest 0.235",
+          "optimalShift": "6500 rpm"
+        },
+        "damping": {
+          "slowBumpFront": "+2.00",
+          "fastBumpFront": "+4.00",
+          "bumpZoneDivFront": "0.96",
+          "slowReboundFront": "+3.00",
+          "slowBumpRear": "+2.00",
+          "fastBumpRear": "+4.00",
+          "bumpZoneDivRear": "0.96",
+          "slowReboundRear": "+3.00"
+        },
+        "springs": {
+          "rideHeightFront": "30.00",
+          "springRateFront": "103.41",
+          "rollBarFront": "14.00",
+          "rideHeightRear": "30.00",
+          "springRateRear": "84.14",
+          "rollBarRear": "32.31"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "carName": "Ford Focus ST",
+    "img": "img/car-img/ffocus.png",
+    "setup": [
+      {
+        "country": "Argentina",
+        "tyres": "soft",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      },
+      {
+        "country": "Finland",
+        "tyres": "soft",
+        "conditions": "wet",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      },
+      {
+        "country": "Scotland",
+        "tyres": "soft",
+        "conditions": "wet",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "carName": "Mitsubishi Lancer VII",
+    "img": "img/car-img/mitslancer.png",
+    "setup": [
+      {
+        "country": "Wales",
+        "tyres": "hard",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      },
+      {
+        "country": "USA",
+        "tyres": "not hard",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      }
+    ]
+  }
+]
