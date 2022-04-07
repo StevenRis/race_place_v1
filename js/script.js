@@ -17,9 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
         const carCard = document.createElement('div');
         carCard.classList.add('car-card');
         carCard.innerHTML = `
-        <div class="car-card__title"><span>${car.carName}</span></div>
+        
         <div class='car-card__image'>
             <img src="${car.img}" alt="">
+            <div class="car-card__title"><span>${car.carName}</span></div>
         </div>
         <div class="car-card__setups setups">
         </div>
@@ -199,11 +200,9 @@ window.addEventListener('DOMContentLoaded', () => {
   ///////// ENTER SCREEN /; //////
   const enterBtn = document.querySelector('.enter-screen__title');
   const enterScreen = document.querySelector('.enter-screen');
-  const main = document.querySelector('.main__bg');
+  const main = document.querySelector('.main-bg');
 
-  enterBtn.addEventListener('click', () => {
-    loadSelectionPage();
-  });
+  enterBtn.addEventListener('click', loadSelectionPage);
 
   function loadSelectionPage() {
     addHide();
