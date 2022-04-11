@@ -1,7 +1,7 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-  let tree = document.querySelector('.main');
+  let tree = document.querySelector('.wrapper');
   const url = 'db.json';
   let carCards;
   let setupsParent;
@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
         const carCard = document.createElement('div');
         carCard.classList.add('car-card');
         carCard.innerHTML = `
-        
         <div class='car-card__image'>
             <img src="${car.img}" alt="">
             <div class="car-card__title"><span>${car.carName}</span></div>
@@ -69,7 +68,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div>Rear Viscous Differential: ${setup.differential.rearVisDif} kgf-m/100 rpm</div>
             </div>
 
-            <div class="item__gear">Gearing
+            <div class="item__gear">
+                <span>Gearing</span>
                 <div>1st Gear: ${setup.gearing.gear1}</div>
                 <div>2nt Gear: ${setup.gearing.gear2}</div>
                 <div>3rd Gear: ${setup.gearing.gear3}</div>
@@ -81,7 +81,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div>Optimal Shift: ${setup.gearing.optimalShift}</div>
             </div>
 
-            <div class="item__damp">Damping
+            <div class="item__damp">
+                <span>Damping</span>
                 <div>Slow Bump Front: ${setup.damping.slowBumpFront}</div>
                 <div>Fast Bump Front: ${setup.damping.fastBumpFront}</div>
                 <div>Bump Zone Division Front: ${setup.damping.bumpZoneDivFront}</div>
@@ -93,7 +94,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div>Slow Rebound FroRearnt: ${setup.damping.slowReboundRear}</div>
             </div>
 
-            <div class="item__springs">Springs
+            <div class="item__springs">
+                <span>Springs</span>
                 <div>Ride Height Front: ${setup.springs.rideHeightFront} mm</div>
                 <div>Spring Rate Front: ${setup.springs.springRateFront} N/mm</div>
                 <div>Ride Height Rear: ${setup.springs.rideHeightRear} mm</div>
@@ -118,11 +120,12 @@ window.addEventListener('DOMContentLoaded', () => {
   createCarCard();
 
   // const carCards = document.querySelectorAll('.car-card'), // not working
-  const cardsParent = document.querySelector('.main');
+  const cardsParent = document.querySelector('.wrapper');
 
   //click on the class main (event delegations)
   cardsParent.addEventListener('click', (e) => {
     const target = e.target;
+    console.log(target);
     if (target.tagName == 'IMG') {
       carCards.forEach((item, i) => {
         if (target.parentElement.parentNode == item) {
@@ -192,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //click on background closes each car card
   cardsParent.addEventListener('click', (e) => {
-    if (e.target.classList.contains('main')) {
+    if (e.target.classList.contains('wrapper')) {
       closeCarCard();
     }
   });
