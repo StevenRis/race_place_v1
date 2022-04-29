@@ -65,12 +65,12 @@ window.addEventListener('DOMContentLoaded', () => {
             <div classs="country-title"><span>Country: ${setup.country}</span></div>
 
             <div class="item__tyres">
-                <span>Tyres</span>
+                <span>Tyres - </span>
                 <span>${setup.tyres}</span>
             </div>
 
             <div class="item__conditions">
-                <span>Conditions</span>
+                <span>Conditions - </span>
                 <span>${setup.conditions}</span>
             </div>
 
@@ -98,6 +98,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div>Front Viscous Differential: ${setup.differential.frontVisDif} kgf-m/100 rpm</div>
                 <div>Centre Viscous Differential: ${setup.differential.centerVisDif} kgf-m/100 rpm</div>
                 <div>Rear Viscous Differential: ${setup.differential.rearVisDif} kgf-m/100 rpm</div>
+                <div>Rear LSD Driving lock: ${setup.differential.rearLsdDrivLock} %</div>
+                <div>Rear LSD Braking Lock: ${setup.differential.rearLsdBrakeLock} %</div>
+                <div>Rear LSD Preload: ${setup.differential.rearLSDPreload} N-m</div>
             </div>
 
             <div class="item__gear">
