@@ -892,7 +892,7 @@
   },
   {
     "id": 2,
-    "carName": "Ford Focus ST",
+    "carName": "Ford Focus RS 2001",
     "img": "img/car-img/ffocus.png",
     "setup": [
       {
@@ -1024,6 +1024,95 @@
     "id": 3,
     "carName": "Mitsubishi Lancer VII",
     "img": "img/car-img/mitslancer.png",
+    "setup": [
+      {
+        "country": "Wales",
+        "tyres": "hard",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      },
+      {
+        "country": "USA",
+        "tyres": "not hard",
+        "conditions": "dry",
+        "alignment": {
+          "toeAngleFront": -0.2,
+          "camberAngleFront": -0.9,
+          "toeAngleRear": 0,
+          "camberAngleRear": -0.97
+        },
+        "brakes": {
+          "brakingForce": 1.298,
+          "brakeBias": 58
+        },
+        "differential": {
+          "frontLSDDrivingLock": 36,
+          "frontLSDBrakingLock": 40,
+          "frontLSDPreload": 100
+        },
+        "gearing": {
+          "fstGear": 0.393,
+          "sndGear": 0.524,
+          "thrdGear": 0.73,
+          "forthGear": 1.009,
+          "finalDrive": 0.21,
+          "note": "Final drive: Minimum ",
+          "optimalShift": "Redline"
+        },
+        "damping": {
+          "slowBumpFront": -2,
+          "slowReboundFront": -1,
+          "slowBumpRear": -2,
+          "slowRebound": -1
+        },
+        "springs": {
+          "rideHeightFront": -20,
+          "springRateFront": 102.26,
+          "rideHeightRear": -20,
+          "springRateRear": 12.5
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "carName": "Mini Cooper S",
+    "img": "img/car-img/mcooper.png",
     "setup": [
       {
         "country": "Wales",
