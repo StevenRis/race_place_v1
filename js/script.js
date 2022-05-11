@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let s;
   let backBtn;
 
-  //create cards with cars and setups
+  //creating cards with cars and setups
   async function createCarCard() {
     try {
       let res = await fetch(url);
@@ -24,24 +24,14 @@ window.addEventListener('DOMContentLoaded', () => {
               <img src="${car.img}" alt="">
               <div class="car-card__title"><span>${car.carName}</span></div>
               <div class="button">
-                <button class="button__back">Close</button>
+                <button class="button__back">Back</button>
               </div>
           </div>
           <div class="car-card__countries"></div>
         `;
         tree.append(carCard);
-        ///
-        let carCardSetups = document.querySelectorAll('.car-card__countries');
 
-        ///
-        // car.setup.forEach((setup) => {
-        //   const el = document.createElement('div');
-        //   el.classList.add('setup-country');
-        //   el.innerHTML = `${setup.country}`;
-        //   setups.forEach((item) => {
-        //     item.appendChild(el);
-        //   });
-        // });
+        let carCardSetups = document.querySelectorAll('.car-card__countries');
 
         car.setup.map((x) => {
           const el = document.createElement('div');
@@ -171,7 +161,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // const carCards = document.querySelectorAll('.car-card'), // not working
   const cardsParent = document.querySelector('.wrapper');
 
-  //click on the class main (event delegations)
+  // click on car card to open country list
   function clickOnCarCard() {
     cardsParent.addEventListener('click', (e) => {
       const target = e.target;
@@ -190,7 +180,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   clickOnCarCard();
 
-  // click on the class setups
+  // click on country to open setup
   function getSetups(parent, set) {
     parent.forEach((item) => {
       item.addEventListener('click', (e) => {
@@ -208,7 +198,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // remove class selected and class setups--active
   function closeCarCard() {
     carCards.forEach((item) => {
       item.classList.remove('hide');
@@ -218,8 +207,6 @@ window.addEventListener('DOMContentLoaded', () => {
     closeSetups();
   }
 
-  // add class 'selected' to car card
-  // and class 'setup--active' to car-card__setups
   function openCarCard(item) {
     carCards[item].classList.add('selected');
     carCards[item].lastElementChild.classList.add('car-card__setups-active');
@@ -231,28 +218,32 @@ window.addEventListener('DOMContentLoaded', () => {
     backBtn[item].classList.add('show');
   }
 
-  // remove class 'selected' and 'setup__item--active'
   function closeSetups() {
     setupCountry.forEach((item) => {
       item.classList.remove('chosen');
     });
+
+    setupCountry.forEach((item) => {
+      item.classList.add('shadow');
+    });
+
     s.forEach((item) => {
       item.classList.remove('setup-country__item--active');
     });
   }
 
-  // add class 'selected' and class 'setup__item--active'
   function openSetups(item) {
     setupCountry[item].classList.add('chosen');
+    setupCountry[item].classList.remove('shadow');
+
     s[item].classList.add('setup-country__item--active');
   }
 
-  //listen click on the bg to close car's setup
-  cardsParent.addEventListener('click', (e) => {
-    if (e.target.classList.contains('wrapper')) {
-      closeCarCard();
-    }
-  });
+  // cardsParent.addEventListener('click', (e) => {
+  //   if (e.target.classList.contains('wrapper')) {
+  //     closeCarCard();
+  //   }
+  // });
 
   ///////// ENTER SCREEN /; //////
   const enterBtn = document.querySelector('.enter-screen__title');

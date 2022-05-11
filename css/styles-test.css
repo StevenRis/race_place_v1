@@ -176,7 +176,7 @@ h1 {
 .button__back {
   font-size: 2rem;
   color: #fff;
-  background-color: rgb(148, 11, 11);
+  background-color: #ea4763;
   margin-top: 15px;
   padding: 5px 15px;
   border-radius: 5px;
@@ -196,14 +196,16 @@ h1 {
 }
 
 .setup-country {
-  color: #000000;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #bda9a4;
-  /* box-shadow: 4px 4px 8px #63dbc5, -4px -4px 8px #63dbc5; */
+  color: #000000;
+  background-color: #e7002a;
   border-radius: 10px;
   padding: 1rem 1rem;
   margin: 2rem 2rem;
   cursor: pointer;
+  /* box-shadow: 4px 4px 8px #63dbc5, -4px -4px 8px #63dbc5; */
 }
 
 .setups__country {
@@ -227,7 +229,7 @@ h1 {
   margin: 15px 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #bda9a4;
+  background-color: #e7002a;
 }
 
 .setup__item div {
@@ -252,4 +254,44 @@ h1 {
 
 .show {
   display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .main-bg {
+    height: auto;
+    background: none;
+    background-color: #022930;
+  }
+
+  .car-card {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .car-card__countries {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .car-card__image img {
+    width: 300px;
+  }
+
+  .setup-country {
+    margin: 1rem;
+  }
+
+  .country {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .setup__item {
+    flex-direction: column;
+  }
+
+  .shadow {
+    opacity: 0.5;
+  }
 }
