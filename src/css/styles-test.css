@@ -158,7 +158,12 @@ h1 {
 }
 
 .car-card__image {
+  position: relative;
   padding: 10px 0;
+}
+
+.car-card__image img:hover + .car-card__title {
+  display: flex;
 }
 
 .car-card__image img {
@@ -166,7 +171,17 @@ h1 {
 }
 
 .car-card__title {
-  margin-top: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  background-color: hsla(0, 0%, 0%, 0.664);
+  /* opacity: 0.5; */
+  height: 50px;
+  width: 551px;
+  border-radius: 0 0 10px 10px;
 }
 
 .button {
@@ -176,7 +191,7 @@ h1 {
 .button__back {
   font-size: 2rem;
   color: #fff;
-  background-color: #ea4763;
+  background-color: #ff003c;
   margin-top: 15px;
   padding: 5px 15px;
   border-radius: 5px;
@@ -199,8 +214,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000000;
-  background-color: #e7002a;
+  color: #fff;
+  background-color: #ff003c;
   border-radius: 10px;
   padding: 1rem 1rem;
   margin: 2rem 2rem;
@@ -220,6 +235,10 @@ h1 {
   display: flex;
 }
 
+.country span {
+  font-weight: bold;
+}
+
 .setup__item {
   display: flex;
 }
@@ -229,11 +248,20 @@ h1 {
   margin: 15px 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #e7002a;
+  background-color: #fff;
 }
 
 .setup__item div {
   margin-bottom: 10px;
+}
+
+.item__alignment div:first-child,
+.item__brakes div:first-child,
+.item__dif div:first-child,
+.item__gear div:first-child,
+.item__damp div:first-child,
+.item__springs div:first-child {
+  font-weight: bold;
 }
 
 .setup-country__item--active {
@@ -245,7 +273,7 @@ h1 {
 }
 
 .chosen {
-  box-shadow: 4px 4px 8px #06a313, -4px -4px 8px #06a313;
+  box-shadow: 4px 4px 8px #b3c2b4, -4px -4px 8px #b3c2b4;
 }
 
 .hide {

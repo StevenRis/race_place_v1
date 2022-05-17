@@ -1,5 +1,8 @@
 'use strict';
 
+import say from './modules/test';
+import enterScreen from './modules/enterScreen';
+
 window.addEventListener('DOMContentLoaded', () => {
   let tree = document.querySelector('.wrapper');
   let setupsContainer = document.querySelector('.setups-container');
@@ -245,30 +248,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //   }
   // });
 
-  ///////// ENTER SCREEN /; //////
-  const enterBtn = document.querySelector('.enter-screen__title');
-  const enterScreen = document.querySelector('.enter-screen');
-  const main = document.querySelector('.main-bg');
-
-  enterBtn.addEventListener('click', loadSelectionPage);
-
-  function loadSelectionPage() {
-    addHide();
-    removeHide();
-    changeBG();
-  }
-
-  function addHide() {
-    enterScreen.classList.add('hide');
-  }
-
-  function removeHide() {
-    main.classList.remove('hide');
-  }
-
-  function changeBG() {
-    document.querySelector('.main').style.backgroundImage =
-      'url(../img/selectionPage-bg.jpg)';
-  }
   //
+  enterScreen();
+  say();
 });
