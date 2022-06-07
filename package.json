@@ -4,7 +4,9 @@
   "description": "setups for cars in Dirt Rally 2.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/StevenRis/race_place#readme",
   "devDependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
